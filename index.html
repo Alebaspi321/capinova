@@ -3,23 +3,49 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#071630">
-  <meta name="description" content="CapiNova desarrolla sistemas, páginas web, automatizaciones, dashboards, soluciones de datos y diseño digital.">
-  <title>CapiNova | Ideas que se convierten en soluciones</title>
+  <meta name="theme-color" content="#07172f">
+  <meta name="description" content="CapiNova crea soluciones digitales para negocios y profesionales: desarrollo de sistemas, páginas web, automatización, dashboards, datos, branding y contenido digital.">
+  <meta property="og:title" content="CapiNova | Ideas que se convierten en soluciones">
+  <meta property="og:description" content="Tecnología, datos y creatividad para convertir ideas en soluciones digitales funcionales.">
+  <meta property="og:type" content="website">
+  <title>CapiNova | Soluciones digitales</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="bg-glow bg-glow-1"></div>
-  <div class="bg-glow bg-glow-2"></div>
+  <div class="page-glow glow-one"></div>
+  <div class="page-glow glow-two"></div>
 
   <header class="site-header">
-    <div class="container nav-wrap">
-      <a class="brand" href="#inicio" aria-label="CapiNova inicio">
-        <span class="brand-mark">C</span>
-        <span class="brand-name">Capi<span>Nova</span></span>
+    <div class="container nav">
+      <a class="brand" href="#inicio" aria-label="CapiNova">
+        <svg class="brand-logo" viewBox="0 0 120 120" role="img" aria-label="Logo CapiNova">
+          <defs>
+            <linearGradient id="g1" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0%" stop-color="#14dfff"/>
+              <stop offset="46%" stop-color="#157dff"/>
+              <stop offset="100%" stop-color="#a92dff"/>
+            </linearGradient>
+            <linearGradient id="g2" x1="0" y1="1" x2="1" y2="0">
+              <stop offset="0%" stop-color="#0b1744"/>
+              <stop offset="55%" stop-color="#4b34f3"/>
+              <stop offset="100%" stop-color="#c32cff"/>
+            </linearGradient>
+          </defs>
+          <path d="M23 79c-8-21 1-50 23-64 17-11 40-12 57-2-12 0-28 5-37 18 18-4 37 1 46 14-10-5-20-7-29-5 11 10 13 25 7 37-8 17-30 29-51 26-7-1-12-3-16-5z" fill="url(#g1)"/>
+          <path d="M35 91c3-18 12-34 28-45 10-7 22-10 33-8-16 7-25 19-28 31 13-6 27-7 39-1-13 2-23 8-30 17-11 14-26 20-42 17z" fill="url(#g2)"/>
+          <path d="M54 39c5-7 12-11 20-11 13 0 24 10 27 23 2 8 0 17-6 24-7 9-19 15-31 16-7 0-13-2-17-6 5-3 10-7 14-13-10 1-19-2-24-9-5-8-4-17 2-24 4-4 9-6 15-6z" fill="#f8fbff"/>
+          <circle cx="72" cy="45" r="3.6" fill="#07172f"/>
+          <ellipse cx="91" cy="52" rx="5.4" ry="3.8" fill="#07172f"/>
+          <path d="M79 65c4 3 8 3 12 0" fill="none" stroke="#07172f" stroke-width="3" stroke-linecap="round"/>
+          <path d="M89 14l3 8 8 3-8 3-3 8-3-8-8-3 8-3z" fill="url(#g1)"/>
+        </svg>
+        <span class="brand-copy">
+          <strong>CapiNova</strong>
+          <small>Ideas que se convierten en soluciones</small>
+        </span>
       </a>
 
       <button class="menu-toggle" aria-label="Abrir menú" aria-expanded="false">
@@ -27,227 +53,254 @@
       </button>
 
       <nav class="nav-links">
+        <a href="#que-es">¿Qué es?</a>
         <a href="#servicios">Servicios</a>
+        <a href="#proceso">Cómo trabajamos</a>
         <a href="#portafolio">Portafolio</a>
-        <a href="#paquetes">Paquetes</a>
-        <a href="#nosotros">Nosotros</a>
-        <a href="#contacto" class="nav-cta">Cotizar</a>
+        <a href="#contacto" class="nav-cta">Cotizar proyecto</a>
       </nav>
     </div>
   </header>
 
   <main>
-    <section class="hero section-space" id="inicio">
+    <section class="hero" id="inicio">
       <div class="container hero-grid">
         <div class="hero-copy">
-          <span class="kicker">TECNOLOGÍA · DATOS · CREATIVIDAD</span>
-          <h1>Transformamos ideas en <span>soluciones digitales.</span></h1>
+          <span class="eyebrow">TECNOLOGÍA · DATOS · CREATIVIDAD</span>
+          <h1>Ideas que se convierten en <span>soluciones digitales.</span></h1>
           <p class="hero-text">
-            En CapiNova desarrollamos sistemas, páginas web, automatizaciones,
-            dashboards y soluciones visuales para negocios, profesionales y organizaciones.
+            En CapiNova diseñamos y desarrollamos soluciones digitales para ayudar a negocios, profesionales y organizaciones a trabajar mejor, verse mejor y crecer con tecnología.
           </p>
+
           <div class="hero-actions">
-            <a class="btn btn-primary" href="#contacto">Solicitar cotización</a>
-            <a class="btn btn-ghost" href="#servicios">Ver servicios</a>
+            <a class="btn btn-primary" href="https://wa.me/59174280209?text=Hola%20CapiNova,%20me%20gustar%C3%ADa%20solicitar%20una%20cotizaci%C3%B3n." target="_blank" rel="noopener">Hablar por WhatsApp</a>
+            <a class="btn btn-secondary" href="#servicios">Explorar servicios</a>
           </div>
-          <div class="hero-points">
-            <span>✓ Soluciones a medida</span>
-            <span>✓ Diseño adaptable</span>
-            <span>✓ Atención personalizada</span>
+
+          <div class="trust-row">
+            <div><strong>Sistemas</strong><span>Soluciones a medida</span></div>
+            <div><strong>Automatización</strong><span>Menos tareas manuales</span></div>
+            <div><strong>Datos</strong><span>Mejores decisiones</span></div>
           </div>
         </div>
 
-        <div class="hero-visual">
-          <div class="capinova-orb">
-            <div class="orb-ring ring-a"></div>
-            <div class="orb-ring ring-b"></div>
-            <div class="capy-symbol">C</div>
-            <span class="spark spark-1">✦</span>
-            <span class="spark spark-2">✦</span>
+        <div class="hero-panel">
+          <div class="hero-logo-wrap">
+            <svg class="hero-logo" viewBox="0 0 120 120" aria-hidden="true">
+              <defs>
+                <linearGradient id="hg1" x1="0" y1="0" x2="1" y2="1">
+                  <stop offset="0%" stop-color="#14dfff"/>
+                  <stop offset="48%" stop-color="#157dff"/>
+                  <stop offset="100%" stop-color="#a92dff"/>
+                </linearGradient>
+                <linearGradient id="hg2" x1="0" y1="1" x2="1" y2="0">
+                  <stop offset="0%" stop-color="#0b1744"/>
+                  <stop offset="58%" stop-color="#4b34f3"/>
+                  <stop offset="100%" stop-color="#c32cff"/>
+                </linearGradient>
+              </defs>
+              <path d="M23 79c-8-21 1-50 23-64 17-11 40-12 57-2-12 0-28 5-37 18 18-4 37 1 46 14-10-5-20-7-29-5 11 10 13 25 7 37-8 17-30 29-51 26-7-1-12-3-16-5z" fill="url(#hg1)"/>
+              <path d="M35 91c3-18 12-34 28-45 10-7 22-10 33-8-16 7-25 19-28 31 13-6 27-7 39-1-13 2-23 8-30 17-11 14-26 20-42 17z" fill="url(#hg2)"/>
+              <path d="M54 39c5-7 12-11 20-11 13 0 24 10 27 23 2 8 0 17-6 24-7 9-19 15-31 16-7 0-13-2-17-6 5-3 10-7 14-13-10 1-19-2-24-9-5-8-4-17 2-24 4-4 9-6 15-6z" fill="#f8fbff"/>
+              <circle cx="72" cy="45" r="3.6" fill="#07172f"/>
+              <ellipse cx="91" cy="52" rx="5.4" ry="3.8" fill="#07172f"/>
+              <path d="M79 65c4 3 8 3 12 0" fill="none" stroke="#07172f" stroke-width="3" stroke-linecap="round"/>
+              <path d="M89 14l3 8 8 3-8 3-3 8-3-8-8-3 8-3z" fill="url(#hg1)"/>
+            </svg>
           </div>
-          <div class="floating-card card-a">
-            <span class="mini-icon">⚙</span>
-            <div><strong>Sistemas</strong><small>Procesos inteligentes</small></div>
+          <div class="hero-panel-copy">
+            <span class="panel-label">CapiNova</span>
+            <h2>Tecnología útil, clara y bien diseñada.</h2>
+            <p>Unimos desarrollo, automatización, datos y diseño para crear soluciones que sí se adaptan a cada cliente.</p>
           </div>
-          <div class="floating-card card-b">
-            <span class="mini-icon">⌁</span>
-            <div><strong>Datos</strong><small>Decisiones claras</small></div>
+          <div class="panel-chips">
+            <span>Desarrollo</span><span>Web</span><span>Automatización</span><span>Datos</span><span>Diseño</span>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="section-space section-soft" id="servicios">
+    <section class="section section-soft" id="que-es">
+      <div class="container two-col">
+        <div>
+          <span class="eyebrow">¿QUÉ ES CAPINOVA?</span>
+          <h2>Una marca digital que combina tecnología y creatividad.</h2>
+        </div>
+        <div class="body-copy">
+          <p><strong>CapiNova</strong> nace para ayudar a convertir procesos, ideas y necesidades en soluciones digitales funcionales.</p>
+          <p>Trabajamos con desarrollo de sistemas, páginas web, automatización, dashboards, ciencia de datos, branding y contenido digital. Nuestro objetivo es que cada solución sea útil, moderna, clara y fácil de usar.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="servicios">
       <div class="container">
         <div class="section-heading">
-          <span class="kicker">SERVICIOS</span>
-          <h2>Todo lo que tu proyecto necesita para crecer.</h2>
-          <p>Combinamos desarrollo, automatización, datos y diseño en soluciones simples de usar y pensadas para resultados reales.</p>
+          <span class="eyebrow">SERVICIOS</span>
+          <h2>Soluciones para distintas etapas de tu negocio.</h2>
+          <p>Desde una identidad visual hasta un sistema completo de gestión.</p>
         </div>
 
-        <div class="service-grid">
+        <div class="services-grid">
           <article class="service-card featured">
-            <div class="service-icon">⌨</div>
-            <span class="service-number">01</span>
+            <span class="service-no">01</span>
+            <div class="service-icon">⌘</div>
             <h3>Desarrollo de sistemas</h3>
-            <p>Sistemas web personalizados, gestión de clientes, inventarios, agendas, reportes e integraciones.</p>
-            <a href="#contacto">Cotizar proyecto →</a>
+            <p>Sistemas web personalizados, gestión de clientes, inventarios, agendas, procesos, reportes e integraciones.</p>
           </article>
-
           <article class="service-card">
+            <span class="service-no">02</span>
             <div class="service-icon">◎</div>
-            <span class="service-number">02</span>
             <h3>Páginas web</h3>
-            <p>Landing pages, páginas institucionales, portafolios y sitios adaptables a celular.</p>
-            <a href="#contacto">Quiero mi web →</a>
+            <p>Landing pages, páginas institucionales, portafolios y webs profesionales adaptables a celular.</p>
           </article>
-
           <article class="service-card">
+            <span class="service-no">03</span>
             <div class="service-icon">↻</div>
-            <span class="service-number">03</span>
             <h3>Automatización</h3>
             <p>Google Sheets, Apps Script, formularios, PDFs, correos automáticos y flujos internos.</p>
-            <a href="#contacto">Automatizar ahora →</a>
           </article>
-
           <article class="service-card">
+            <span class="service-no">04</span>
             <div class="service-icon">▥</div>
-            <span class="service-number">04</span>
             <h3>Dashboards y datos</h3>
-            <p>Indicadores, seguimiento de ventas, gastos, personal, proyectos y visualización de datos.</p>
-            <a href="#contacto">Ver propuesta →</a>
+            <p>Indicadores, seguimiento de ventas, gastos, personal, proyectos y visualización de información.</p>
           </article>
-
           <article class="service-card">
+            <span class="service-no">05</span>
             <div class="service-icon">✦</div>
-            <span class="service-number">05</span>
             <h3>Diseño y branding</h3>
             <p>Logos, identidad visual, flyers, catálogos, manuales y piezas publicitarias.</p>
-            <a href="#contacto">Crear mi marca →</a>
           </article>
-
           <article class="service-card">
+            <span class="service-no">06</span>
             <div class="service-icon">◫</div>
-            <span class="service-number">06</span>
             <h3>Redes sociales</h3>
             <p>Posts, carruseles, historias, reels, portadas y paquetes mensuales de contenido.</p>
-            <a href="#contacto">Impulsar mis redes →</a>
           </article>
         </div>
       </div>
     </section>
 
-    <section class="section-space" id="portafolio">
+    <section class="section section-soft" id="proceso">
       <div class="container">
-        <div class="section-heading split-heading">
+        <div class="section-heading">
+          <span class="eyebrow">CÓMO TRABAJAMOS</span>
+          <h2>Un proceso simple para llegar a una buena solución.</h2>
+        </div>
+
+        <div class="process-grid">
+          <article><span>01</span><h3>Entendemos tu necesidad</h3><p>Nos cuentas el problema, objetivo o idea que quieres desarrollar.</p></article>
+          <article><span>02</span><h3>Diseñamos la propuesta</h3><p>Definimos alcance, estructura, funcionalidades y una solución adecuada.</p></article>
+          <article><span>03</span><h3>Desarrollamos</h3><p>Construimos, diseñamos y probamos cada parte del proyecto.</p></article>
+          <article><span>04</span><h3>Entregamos y acompañamos</h3><p>Implementamos la solución y realizamos los ajustes necesarios.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="portafolio">
+      <div class="container">
+        <div class="section-heading portfolio-heading">
           <div>
-            <span class="kicker">PORTAFOLIO</span>
-            <h2>Soluciones pensadas para problemas reales.</h2>
+            <span class="eyebrow">PORTAFOLIO</span>
+            <h2>Proyectos que muestran lo que podemos construir.</h2>
           </div>
-          <p>Aquí iremos agregando tus mejores proyectos de sistemas, web, automatización, datos y diseño.</p>
+          <p>Esta sección irá creciendo con proyectos reales de sistemas, web, automatización, datos y diseño.</p>
         </div>
 
         <div class="portfolio-grid">
-          <article class="project project-large">
-            <div class="project-ui">
-              <div class="ui-top"><span></span><span></span><span></span></div>
-              <div class="ui-body">
-                <div class="ui-sidebar"></div>
-                <div class="ui-content">
-                  <div class="metric-row"><i></i><i></i><i></i></div>
-                  <div class="chart-line"></div>
+          <article class="portfolio-card large">
+            <div class="mock-window">
+              <div class="mock-top"><span></span><span></span><span></span></div>
+              <div class="mock-body">
+                <div class="mock-sidebar"></div>
+                <div class="mock-main">
+                  <div class="mock-stats"><i></i><i></i><i></i></div>
+                  <div class="mock-chart"></div>
                 </div>
               </div>
             </div>
-            <div class="project-copy">
+            <div class="portfolio-copy">
               <span>SISTEMAS + DATOS</span>
               <h3>Plataformas internas y dashboards</h3>
-              <p>Organiza información, usuarios, procesos e indicadores en una sola experiencia.</p>
+              <p>Información centralizada, indicadores y procesos en un solo lugar.</p>
             </div>
           </article>
 
-          <article class="project">
-            <div class="project-visual web-visual">www</div>
-            <div class="project-copy">
+          <article class="portfolio-card">
+            <div class="visual-block web-block">WEB</div>
+            <div class="portfolio-copy">
               <span>WEB</span>
-              <h3>Sitios modernos y responsivos</h3>
-              <p>Experiencias rápidas, limpias y adaptables a cualquier dispositivo.</p>
+              <h3>Sitios profesionales</h3>
+              <p>Diseño moderno, rápido y adaptable a cualquier dispositivo.</p>
             </div>
           </article>
 
-          <article class="project">
-            <div class="project-visual automation-visual">↻</div>
-            <div class="project-copy">
+          <article class="portfolio-card">
+            <div class="visual-block auto-block">↻</div>
+            <div class="portfolio-copy">
               <span>AUTOMATIZACIÓN</span>
-              <h3>Menos tareas repetitivas</h3>
-              <p>Flujos inteligentes para ahorrar tiempo y reducir errores.</p>
+              <h3>Procesos inteligentes</h3>
+              <p>Menos tareas repetitivas y más tiempo para lo importante.</p>
             </div>
           </article>
         </div>
       </div>
     </section>
 
-    <section class="section-space section-soft" id="paquetes">
-      <div class="container package-wrap">
+    <section class="section section-soft">
+      <div class="container custom-package">
         <div>
-          <span class="kicker">PAQUETES PERSONALIZADOS</span>
-          <h2>Combina los servicios que necesites.</h2>
-          <p>Web + diseño + automatización + datos + sistemas. Armamos una propuesta según tu necesidad, alcance y presupuesto.</p>
+          <span class="eyebrow">PAQUETES PERSONALIZADOS</span>
+          <h2>¿Necesitas combinar varios servicios?</h2>
+          <p>Podemos crear una propuesta a medida combinando web, sistemas, automatización, datos, diseño y contenido.</p>
         </div>
-        <div class="package-card">
-          <span class="package-label">CapiNova a medida</span>
-          <h3>Una solución, varios servicios.</h3>
-          <ul>
-            <li>Diagnóstico inicial</li>
-            <li>Propuesta personalizada</li>
-            <li>Desarrollo por etapas</li>
-            <li>Acompañamiento en implementación</li>
-          </ul>
-          <a class="btn btn-primary" href="#contacto">Armar mi paquete</a>
-        </div>
+        <a class="btn btn-primary" href="https://wa.me/59174280209?text=Hola%20CapiNova,%20quiero%20armar%20un%20paquete%20personalizado." target="_blank" rel="noopener">Armar mi paquete</a>
       </div>
     </section>
 
-    <section class="section-space" id="nosotros">
-      <div class="container about-grid">
-        <div class="about-badge">
-          <span class="brand-mark large">C</span>
-          <div>
-            <strong>CapiNova</strong>
-            <small>Ideas que se convierten en soluciones</small>
-          </div>
-        </div>
-        <div class="about-copy">
-          <span class="kicker">SOBRE CAPINOVA</span>
-          <h2>Tecnología con una mirada creativa.</h2>
-          <p>CapiNova nace para ayudar a negocios y profesionales a digitalizar procesos, organizar información y construir una presencia digital profesional sin soluciones complicadas.</p>
-        </div>
-      </div>
-    </section>
-
-    <section class="section-space contact-section" id="contacto">
+    <section class="section" id="contacto">
       <div class="container contact-card">
-        <div>
-          <span class="kicker">CONTACTO</span>
-          <h2>¿Tienes una idea? Hagámosla realidad.</h2>
-          <p>Cuéntanos qué necesitas y preparamos una propuesta personalizada para tu proyecto.</p>
+        <div class="contact-copy">
+          <span class="eyebrow">CONTACTO</span>
+          <h2>Cuéntanos qué quieres crear.</h2>
+          <p>Podemos ayudarte a definir la solución adecuada para tu negocio, proyecto u organización.</p>
         </div>
-        <div class="contact-actions">
-          <a class="btn btn-primary" href="#" id="whatsappLink">Escribir por WhatsApp</a>
-          <a class="btn btn-ghost" href="mailto:" id="emailLink">Enviar correo</a>
+        <div class="contact-details">
+          <a href="https://wa.me/59174280209?text=Hola%20CapiNova,%20me%20gustar%C3%ADa%20solicitar%20informaci%C3%B3n." target="_blank" rel="noopener">
+            <small>WhatsApp</small>
+            <strong>+591 74280209</strong>
+          </a>
+          <a href="mailto:capinovaweb@gmail.com">
+            <small>Correo</small>
+            <strong>capinovaweb@gmail.com</strong>
+          </a>
         </div>
       </div>
     </section>
   </main>
 
+  <a class="whatsapp-float" href="https://wa.me/59174280209?text=Hola%20CapiNova,%20me%20gustar%C3%ADa%20solicitar%20una%20cotizaci%C3%B3n." target="_blank" rel="noopener" aria-label="Contactar por WhatsApp">
+    <span>✆</span>
+  </a>
+
   <footer class="footer">
-    <div class="container footer-wrap">
-      <div class="brand footer-brand">
-        <span class="brand-mark">C</span>
-        <span class="brand-name">Capi<span>Nova</span></span>
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <svg class="brand-logo" viewBox="0 0 120 120" aria-hidden="true">
+          <defs>
+            <linearGradient id="fg1" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#14dfff"/><stop offset="46%" stop-color="#157dff"/><stop offset="100%" stop-color="#a92dff"/></linearGradient>
+          </defs>
+          <path d="M23 79c-8-21 1-50 23-64 17-11 40-12 57-2-12 0-28 5-37 18 18-4 37 1 46 14-10-5-20-7-29-5 11 10 13 25 7 37-8 17-30 29-51 26-7-1-12-3-16-5z" fill="url(#fg1)"/>
+          <path d="M54 39c5-7 12-11 20-11 13 0 24 10 27 23 2 8 0 17-6 24-7 9-19 15-31 16-7 0-13-2-17-6 5-3 10-7 14-13-10 1-19-2-24-9-5-8-4-17 2-24 4-4 9-6 15-6z" fill="#f8fbff"/>
+        </svg>
+        <div><strong>CapiNova</strong><span>Ideas que se convierten en soluciones</span></div>
       </div>
-      <p>Ideas que se convierten en soluciones.</p>
-      <span>© <span id="year"></span> CapiNova</span>
+      <div class="footer-contact">
+        <a href="mailto:capinovaweb@gmail.com">capinovaweb@gmail.com</a>
+        <a href="https://wa.me/59174280209" target="_blank" rel="noopener">+591 74280209</a>
+      </div>
+      <div class="footer-copy">© <span id="year"></span> CapiNova</div>
     </div>
   </footer>
 
