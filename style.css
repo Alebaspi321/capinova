@@ -95,3 +95,15 @@ body{background:
 @media(max-width:960px){.nav-links a:not(.nav-cta):after{display:none}.hero-logo-wrap{height:250px}.hero-logo{width:225px}}
 @media(max-width:640px){.brand-logo{padding:2px}.hero-panel{border-radius:24px}.hero-logo-wrap{height:210px}.hero-logo{width:190px}.orbit-one{width:220px;height:140px}.orbit-two{width:170px;height:230px}.panel-chips{gap:6px}.panel-chips span{padding:7px 9px}}
 @media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none}}
+
+
+/* Interactive services and official WhatsApp treatment */
+.service-filters{display:flex;gap:10px;flex-wrap:wrap;margin:-14px 0 30px}
+.service-filter{appearance:none;border:1px solid var(--line);background:rgba(255,255,255,.035);color:#b9c7df;padding:10px 16px;border-radius:999px;font-weight:800;font-size:.82rem;cursor:pointer;transition:.2s}
+.service-filter:hover,.service-filter.active{color:#fff;border-color:rgba(20,223,255,.35);background:linear-gradient(90deg,rgba(20,223,255,.14),rgba(112,82,255,.17));box-shadow:0 8px 24px rgba(10,90,210,.12)}
+.services-grid{align-items:stretch}.service-card{display:flex;flex-direction:column;min-height:350px}.service-card.is-hidden{display:none}.service-card.is-entering{animation:serviceIn .42s ease both}
+.service-tags{display:flex;gap:6px;flex-wrap:wrap;margin:-26px 0 18px}.service-tags span{font-size:.66rem;letter-spacing:.05em;text-transform:uppercase;color:#a9c6e8;padding:5px 8px;border:1px solid rgba(141,183,236,.13);border-radius:999px;background:rgba(255,255,255,.025)}
+.service-card p{margin-bottom:22px}.service-link{display:inline-flex;align-items:center;justify-content:space-between;gap:18px;margin-top:auto;padding-top:18px;border-top:1px solid var(--line);color:#dffaff;font-size:.86rem;font-weight:800}.service-link span{color:var(--cyan);font-size:1.2rem;transition:transform .2s}.service-link:hover span{transform:translateX(5px)}
+.whatsapp-float{width:auto;height:58px;padding:0 19px 0 14px;border-radius:999px;display:flex;gap:9px;font-size:.9rem;font-weight:800;background:#20c968;border:1px solid rgba(255,255,255,.24);box-shadow:0 16px 38px rgba(5,80,39,.38)}.whatsapp-float svg{width:28px;height:28px;color:#fff}.whatsapp-float:hover{background:#25d366;box-shadow:0 20px 46px rgba(5,115,52,.42)}
+@keyframes serviceIn{from{opacity:0;transform:translateY(14px) scale(.985)}to{opacity:1;transform:none}}
+@media(max-width:640px){.service-filters{gap:8px;overflow-x:auto;flex-wrap:nowrap;padding-bottom:5px;scrollbar-width:none}.service-filters::-webkit-scrollbar{display:none}.service-filter{flex:none;padding:9px 13px}.service-card{min-height:auto}.whatsapp-float{width:56px;height:56px;padding:0;justify-content:center}.whatsapp-float span{display:none}.whatsapp-float svg{width:29px;height:29px}}
