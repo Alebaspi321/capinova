@@ -43,3 +43,22 @@ if ('IntersectionObserver' in window && !window.matchMedia('(prefers-reduced-mot
   }, { threshold: 0.12 });
   revealTargets.forEach((element) => observer.observe(element));
 }
+
+
+const serviceFilters = document.querySelectorAll('.service-filter');
+const serviceCards = document.querySelectorAll('.service-card[data-category]');
+serviceFilters.forEach((button) => {
+  button.addEventListener('click', () => {
+    const filter = button.dataset.filter;
+    serviceFilters.forEach((item) => item.classList.toggle('active', item === button));
+    serviceCards.forEach((card) => {
+      const matches = filter === 'all' || card.dataset.category.split(' ').includes(filter);
+      card.classList.toggle('is-hidden', !matches);
+      if (matches) {
+        card.classList.remove('is-entering');
+        void card.offsetWidth;
+        card.classList.add('is-entering');
+      }
+    });
+  });
+});
