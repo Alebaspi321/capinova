@@ -28,3 +28,18 @@ window.addEventListener('resize', () => {
 
 const year = document.getElementById('year');
 if (year) year.textContent = String(new Date().getFullYear());
+
+
+const revealTargets = document.querySelectorAll('.section-heading, .service-card, .process-grid article, .portfolio-card, .custom-package, .contact-card');
+if ('IntersectionObserver' in window && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+  revealTargets.forEach((element) => element.classList.add('reveal'));
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.12 });
+  revealTargets.forEach((element) => observer.observe(element));
+}
