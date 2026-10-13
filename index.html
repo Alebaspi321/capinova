@@ -1,95 +1,254 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="CapiNova: desarrollo de sistemas, automatización, datos, web y diseño digital." />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#071630">
+  <meta name="description" content="CapiNova desarrolla sistemas, páginas web, automatizaciones, dashboards, soluciones de datos y diseño digital.">
   <title>CapiNova | Ideas que se convierten en soluciones</title>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header class="nav">
-    <a class="brand" href="#inicio">Capi<span>Nova</span></a>
-    <nav>
-      <a href="#servicios">Servicios</a>
-      <a href="#portafolio">Portafolio</a>
-      <a href="#paquetes">Paquetes</a>
-      <a href="#contacto">Contacto</a>
-    </nav>
+  <div class="bg-glow bg-glow-1"></div>
+  <div class="bg-glow bg-glow-2"></div>
+
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="#inicio" aria-label="CapiNova inicio">
+        <span class="brand-mark">C</span>
+        <span class="brand-name">Capi<span>Nova</span></span>
+      </a>
+
+      <button class="menu-toggle" aria-label="Abrir menú" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="nav-links">
+        <a href="#servicios">Servicios</a>
+        <a href="#portafolio">Portafolio</a>
+        <a href="#paquetes">Paquetes</a>
+        <a href="#nosotros">Nosotros</a>
+        <a href="#contacto" class="nav-cta">Cotizar</a>
+      </nav>
+    </div>
   </header>
 
   <main>
-    <section class="hero" id="inicio">
-      <div class="hero-copy">
-        <p class="eyebrow">TECNOLOGÍA · DATOS · CREATIVIDAD</p>
-        <h1>Ideas que se convierten en <span>soluciones.</span></h1>
-        <p class="lead">
-          Creamos sistemas, páginas web, automatizaciones, dashboards y soluciones visuales
-          para negocios, profesionales y organizaciones.
-        </p>
-        <div class="actions">
-          <a class="btn primary" href="#contacto">Solicitar cotización</a>
-          <a class="btn secondary" href="#servicios">Ver servicios</a>
+    <section class="hero section-space" id="inicio">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <span class="kicker">TECNOLOGÍA · DATOS · CREATIVIDAD</span>
+          <h1>Transformamos ideas en <span>soluciones digitales.</span></h1>
+          <p class="hero-text">
+            En CapiNova desarrollamos sistemas, páginas web, automatizaciones,
+            dashboards y soluciones visuales para negocios, profesionales y organizaciones.
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#contacto">Solicitar cotización</a>
+            <a class="btn btn-ghost" href="#servicios">Ver servicios</a>
+          </div>
+          <div class="hero-points">
+            <span>✓ Soluciones a medida</span>
+            <span>✓ Diseño adaptable</span>
+            <span>✓ Atención personalizada</span>
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <div class="capinova-orb">
+            <div class="orb-ring ring-a"></div>
+            <div class="orb-ring ring-b"></div>
+            <div class="capy-symbol">C</div>
+            <span class="spark spark-1">✦</span>
+            <span class="spark spark-2">✦</span>
+          </div>
+          <div class="floating-card card-a">
+            <span class="mini-icon">⚙</span>
+            <div><strong>Sistemas</strong><small>Procesos inteligentes</small></div>
+          </div>
+          <div class="floating-card card-b">
+            <span class="mini-icon">⌁</span>
+            <div><strong>Datos</strong><small>Decisiones claras</small></div>
+          </div>
         </div>
       </div>
-      <div class="hero-art" aria-hidden="true">
-        <div class="orb">
-          <div class="capy">C</div>
+    </section>
+
+    <section class="section-space section-soft" id="servicios">
+      <div class="container">
+        <div class="section-heading">
+          <span class="kicker">SERVICIOS</span>
+          <h2>Todo lo que tu proyecto necesita para crecer.</h2>
+          <p>Combinamos desarrollo, automatización, datos y diseño en soluciones simples de usar y pensadas para resultados reales.</p>
+        </div>
+
+        <div class="service-grid">
+          <article class="service-card featured">
+            <div class="service-icon">⌨</div>
+            <span class="service-number">01</span>
+            <h3>Desarrollo de sistemas</h3>
+            <p>Sistemas web personalizados, gestión de clientes, inventarios, agendas, reportes e integraciones.</p>
+            <a href="#contacto">Cotizar proyecto →</a>
+          </article>
+
+          <article class="service-card">
+            <div class="service-icon">◎</div>
+            <span class="service-number">02</span>
+            <h3>Páginas web</h3>
+            <p>Landing pages, páginas institucionales, portafolios y sitios adaptables a celular.</p>
+            <a href="#contacto">Quiero mi web →</a>
+          </article>
+
+          <article class="service-card">
+            <div class="service-icon">↻</div>
+            <span class="service-number">03</span>
+            <h3>Automatización</h3>
+            <p>Google Sheets, Apps Script, formularios, PDFs, correos automáticos y flujos internos.</p>
+            <a href="#contacto">Automatizar ahora →</a>
+          </article>
+
+          <article class="service-card">
+            <div class="service-icon">▥</div>
+            <span class="service-number">04</span>
+            <h3>Dashboards y datos</h3>
+            <p>Indicadores, seguimiento de ventas, gastos, personal, proyectos y visualización de datos.</p>
+            <a href="#contacto">Ver propuesta →</a>
+          </article>
+
+          <article class="service-card">
+            <div class="service-icon">✦</div>
+            <span class="service-number">05</span>
+            <h3>Diseño y branding</h3>
+            <p>Logos, identidad visual, flyers, catálogos, manuales y piezas publicitarias.</p>
+            <a href="#contacto">Crear mi marca →</a>
+          </article>
+
+          <article class="service-card">
+            <div class="service-icon">◫</div>
+            <span class="service-number">06</span>
+            <h3>Redes sociales</h3>
+            <p>Posts, carruseles, historias, reels, portadas y paquetes mensuales de contenido.</p>
+            <a href="#contacto">Impulsar mis redes →</a>
+          </article>
         </div>
       </div>
     </section>
 
-    <section class="section" id="servicios">
-      <div class="section-head">
-        <p class="eyebrow">LO QUE HACEMOS</p>
-        <h2>Servicios CapiNova</h2>
-      </div>
-      <div class="grid">
-        <article class="card"><span>01</span><h3>Desarrollo de sistemas</h3><p>Sistemas web personalizados, gestión, inventarios, agendas, reportes e integraciones.</p></article>
-        <article class="card"><span>02</span><h3>Páginas web</h3><p>Landing pages, páginas institucionales, portafolios y webs adaptables a celular.</p></article>
-        <article class="card"><span>03</span><h3>Automatización</h3><p>Google Sheets, Apps Script, formularios, PDFs, correos y flujos automáticos.</p></article>
-        <article class="card"><span>04</span><h3>Dashboards y datos</h3><p>Indicadores, ventas, gastos, personal, proyectos y visualización de datos.</p></article>
-        <article class="card"><span>05</span><h3>Diseño y branding</h3><p>Logos, identidad visual, flyers, catálogos, manuales y piezas publicitarias.</p></article>
-        <article class="card"><span>06</span><h3>Redes sociales</h3><p>Posts, carruseles, historias, reels, portadas y paquetes mensuales.</p></article>
+    <section class="section-space" id="portafolio">
+      <div class="container">
+        <div class="section-heading split-heading">
+          <div>
+            <span class="kicker">PORTAFOLIO</span>
+            <h2>Soluciones pensadas para problemas reales.</h2>
+          </div>
+          <p>Aquí iremos agregando tus mejores proyectos de sistemas, web, automatización, datos y diseño.</p>
+        </div>
+
+        <div class="portfolio-grid">
+          <article class="project project-large">
+            <div class="project-ui">
+              <div class="ui-top"><span></span><span></span><span></span></div>
+              <div class="ui-body">
+                <div class="ui-sidebar"></div>
+                <div class="ui-content">
+                  <div class="metric-row"><i></i><i></i><i></i></div>
+                  <div class="chart-line"></div>
+                </div>
+              </div>
+            </div>
+            <div class="project-copy">
+              <span>SISTEMAS + DATOS</span>
+              <h3>Plataformas internas y dashboards</h3>
+              <p>Organiza información, usuarios, procesos e indicadores en una sola experiencia.</p>
+            </div>
+          </article>
+
+          <article class="project">
+            <div class="project-visual web-visual">www</div>
+            <div class="project-copy">
+              <span>WEB</span>
+              <h3>Sitios modernos y responsivos</h3>
+              <p>Experiencias rápidas, limpias y adaptables a cualquier dispositivo.</p>
+            </div>
+          </article>
+
+          <article class="project">
+            <div class="project-visual automation-visual">↻</div>
+            <div class="project-copy">
+              <span>AUTOMATIZACIÓN</span>
+              <h3>Menos tareas repetitivas</h3>
+              <p>Flujos inteligentes para ahorrar tiempo y reducir errores.</p>
+            </div>
+          </article>
+        </div>
       </div>
     </section>
 
-    <section class="section split" id="portafolio">
-      <div>
-        <p class="eyebrow">PORTAFOLIO</p>
-        <h2>Proyectos pensados para resolver problemas reales.</h2>
-      </div>
-      <p>
-        Aquí mostraremos tus sistemas, páginas web, automatizaciones, dashboards y trabajos
-        de diseño. Podemos agregar cada proyecto poco a poco.
-      </p>
-    </section>
-
-    <section class="section" id="paquetes">
-      <div class="section-head">
-        <p class="eyebrow">A TU MEDIDA</p>
-        <h2>Paquetes personalizados</h2>
-      </div>
-      <div class="package">
+    <section class="section-space section-soft" id="paquetes">
+      <div class="container package-wrap">
         <div>
-          <h3>Combina los servicios que necesites</h3>
-          <p>Web + diseño + automatización + datos + sistemas. Armamos una propuesta según tu objetivo y presupuesto.</p>
+          <span class="kicker">PAQUETES PERSONALIZADOS</span>
+          <h2>Combina los servicios que necesites.</h2>
+          <p>Web + diseño + automatización + datos + sistemas. Armamos una propuesta según tu necesidad, alcance y presupuesto.</p>
         </div>
-        <a class="btn primary" href="#contacto">Quiero una propuesta</a>
+        <div class="package-card">
+          <span class="package-label">CapiNova a medida</span>
+          <h3>Una solución, varios servicios.</h3>
+          <ul>
+            <li>Diagnóstico inicial</li>
+            <li>Propuesta personalizada</li>
+            <li>Desarrollo por etapas</li>
+            <li>Acompañamiento en implementación</li>
+          </ul>
+          <a class="btn btn-primary" href="#contacto">Armar mi paquete</a>
+        </div>
       </div>
     </section>
 
-    <section class="section contact" id="contacto">
-      <p class="eyebrow">HABLEMOS</p>
-      <h2>Cuéntanos qué necesitas.</h2>
-      <p>Próximamente agregaremos aquí tu WhatsApp, correo y redes sociales.</p>
-      <a class="btn primary" href="mailto:">Contactar a CapiNova</a>
+    <section class="section-space" id="nosotros">
+      <div class="container about-grid">
+        <div class="about-badge">
+          <span class="brand-mark large">C</span>
+          <div>
+            <strong>CapiNova</strong>
+            <small>Ideas que se convierten en soluciones</small>
+          </div>
+        </div>
+        <div class="about-copy">
+          <span class="kicker">SOBRE CAPINOVA</span>
+          <h2>Tecnología con una mirada creativa.</h2>
+          <p>CapiNova nace para ayudar a negocios y profesionales a digitalizar procesos, organizar información y construir una presencia digital profesional sin soluciones complicadas.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-space contact-section" id="contacto">
+      <div class="container contact-card">
+        <div>
+          <span class="kicker">CONTACTO</span>
+          <h2>¿Tienes una idea? Hagámosla realidad.</h2>
+          <p>Cuéntanos qué necesitas y preparamos una propuesta personalizada para tu proyecto.</p>
+        </div>
+        <div class="contact-actions">
+          <a class="btn btn-primary" href="#" id="whatsappLink">Escribir por WhatsApp</a>
+          <a class="btn btn-ghost" href="mailto:" id="emailLink">Enviar correo</a>
+        </div>
+      </div>
     </section>
   </main>
 
-  <footer>
-    <strong>CapiNova</strong>
-    <span>Ideas que se convierten en soluciones.</span>
+  <footer class="footer">
+    <div class="container footer-wrap">
+      <div class="brand footer-brand">
+        <span class="brand-mark">C</span>
+        <span class="brand-name">Capi<span>Nova</span></span>
+      </div>
+      <p>Ideas que se convierten en soluciones.</p>
+      <span>© <span id="year"></span> CapiNova</span>
+    </div>
   </footer>
 
   <script src="script.js"></script>
