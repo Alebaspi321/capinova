@@ -13,7 +13,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css?v=20261013-0300">
+  <link rel="stylesheet" href="style.css?v=20261013-0400">
 </head>
 <body>
   <div class="page-glow glow-one"></div>
@@ -104,42 +104,61 @@
           <p>Desde una identidad visual hasta un sistema completo de gestión.</p>
         </div>
 
+        <div class="service-filters" role="group" aria-label="Filtrar servicios">
+          <button class="service-filter active" type="button" data-filter="all">Todos</button>
+          <button class="service-filter" type="button" data-filter="tecnologia">Tecnología</button>
+          <button class="service-filter" type="button" data-filter="crecimiento">Crecimiento</button>
+          <button class="service-filter" type="button" data-filter="creatividad">Creatividad</button>
+        </div>
+
         <div class="services-grid">
-          <article class="service-card featured">
+          <article class="service-card featured" data-category="tecnologia">
             <span class="service-no">01</span>
-            <div class="service-icon">⌘</div>
+            <div class="service-icon" aria-hidden="true">⌘</div>
+            <div class="service-tags"><span>A medida</span><span>Escalable</span></div>
             <h3>Desarrollo de sistemas</h3>
-            <p>Sistemas web personalizados, gestión de clientes, inventarios, agendas, procesos, reportes e integraciones.</p>
+            <p>Sistemas web personalizados para clientes, inventarios, agendas, procesos, reportes e integraciones.</p>
+            <a class="service-link" href="https://wa.me/59174280209?text=Hola%20CapiNova,%20quiero%20cotizar%20un%20sistema%20a%20medida." target="_blank" rel="noopener">Cotizar sistema <span>→</span></a>
           </article>
-          <article class="service-card">
+          <article class="service-card" data-category="crecimiento">
             <span class="service-no">02</span>
-            <div class="service-icon">◎</div>
+            <div class="service-icon" aria-hidden="true">◎</div>
+            <div class="service-tags"><span>Responsive</span><span>Rápido</span></div>
             <h3>Páginas web</h3>
             <p>Landing pages, páginas institucionales, portafolios y webs profesionales adaptables a celular.</p>
+            <a class="service-link" href="https://wa.me/59174280209?text=Hola%20CapiNova,%20quiero%20cotizar%20una%20p%C3%A1gina%20web." target="_blank" rel="noopener">Cotizar página web <span>→</span></a>
           </article>
-          <article class="service-card">
+          <article class="service-card" data-category="tecnologia">
             <span class="service-no">03</span>
-            <div class="service-icon">↻</div>
+            <div class="service-icon" aria-hidden="true">↻</div>
+            <div class="service-tags"><span>Flujos</span><span>Productividad</span></div>
             <h3>Automatización</h3>
             <p>Google Sheets, Apps Script, formularios, PDFs, correos automáticos y flujos internos.</p>
+            <a class="service-link" href="https://wa.me/59174280209?text=Hola%20CapiNova,%20quiero%20automatizar%20un%20proceso." target="_blank" rel="noopener">Automatizar proceso <span>→</span></a>
           </article>
-          <article class="service-card">
+          <article class="service-card" data-category="tecnologia">
             <span class="service-no">04</span>
-            <div class="service-icon">▥</div>
+            <div class="service-icon" aria-hidden="true">▥</div>
+            <div class="service-tags"><span>Indicadores</span><span>Control</span></div>
             <h3>Dashboards y datos</h3>
             <p>Indicadores, seguimiento de ventas, gastos, personal, proyectos y visualización de información.</p>
+            <a class="service-link" href="https://wa.me/59174280209?text=Hola%20CapiNova,%20quiero%20cotizar%20un%20dashboard%20de%20datos." target="_blank" rel="noopener">Cotizar dashboard <span>→</span></a>
           </article>
-          <article class="service-card">
+          <article class="service-card" data-category="creatividad">
             <span class="service-no">05</span>
-            <div class="service-icon">✦</div>
+            <div class="service-icon" aria-hidden="true">✦</div>
+            <div class="service-tags"><span>Identidad</span><span>Diseño</span></div>
             <h3>Diseño y branding</h3>
             <p>Logos, identidad visual, flyers, catálogos, manuales y piezas publicitarias.</p>
+            <a class="service-link" href="https://wa.me/59174280209?text=Hola%20CapiNova,%20quiero%20cotizar%20dise%C3%B1o%20y%20branding." target="_blank" rel="noopener">Crear mi identidad <span>→</span></a>
           </article>
-          <article class="service-card">
+          <article class="service-card" data-category="crecimiento creatividad">
             <span class="service-no">06</span>
-            <div class="service-icon">◫</div>
+            <div class="service-icon" aria-hidden="true">◫</div>
+            <div class="service-tags"><span>Contenido</span><span>Marca</span></div>
             <h3>Redes sociales</h3>
             <p>Posts, carruseles, historias, reels, portadas y paquetes mensuales de contenido.</p>
+            <a class="service-link" href="https://wa.me/59174280209?text=Hola%20CapiNova,%20quiero%20cotizar%20contenido%20para%20redes%20sociales." target="_blank" rel="noopener">Cotizar contenido <span>→</span></a>
           </article>
         </div>
       </div>
@@ -243,8 +262,11 @@
     </section>
   </main>
 
-  <a class="whatsapp-float" href="https://wa.me/59174280209?text=Hola%20CapiNova,%20me%20gustar%C3%ADa%20solicitar%20una%20cotizaci%C3%B3n." target="_blank" rel="noopener" aria-label="Contactar por WhatsApp">
-    <span>✆</span>
+  <a class="whatsapp-float" href="https://wa.me/59174280209?text=Hola%20CapiNova,%20me%20gustar%C3%ADa%20solicitar%20una%20cotizaci%C3%B3n." target="_blank" rel="noopener" aria-label="Cotizar por WhatsApp">
+    <svg viewBox="0 0 32 32" aria-hidden="true">
+      <path fill="currentColor" d="M16.04 3A12.9 12.9 0 0 0 5.08 22.72L3.35 29l6.43-1.69A12.95 12.95 0 1 0 16.04 3Zm0 2.18a10.76 10.76 0 1 1-5.49 20.01l-.39-.23-3.82 1 1.02-3.72-.25-.4a10.74 10.74 0 0 1 8.93-16.66Zm-4.7 4.86c-.2 0-.53.08-.81.39-.28.31-1.06 1.04-1.06 2.53s1.09 2.94 1.24 3.14c.15.2 2.14 3.27 5.19 4.59.72.31 1.29.5 1.73.64.73.23 1.39.2 1.91.12.58-.09 1.79-.73 2.04-1.43.25-.7.25-1.3.18-1.43-.08-.12-.28-.2-.58-.35-.3-.15-1.79-.88-2.07-.98-.28-.1-.48-.15-.68.15-.2.3-.78.98-.96 1.18-.18.2-.35.23-.66.08-.3-.15-1.28-.47-2.44-1.5-.9-.8-1.51-1.8-1.69-2.1-.18-.3-.02-.47.13-.62.14-.13.3-.35.45-.53.15-.18.2-.3.3-.5.1-.2.05-.38-.03-.53-.07-.15-.67-1.65-.93-2.26-.24-.58-.49-.5-.68-.51h-.58Z"/>
+    </svg>
+    <span>WhatsApp</span>
   </a>
 
   <footer class="footer">
@@ -261,6 +283,6 @@
     </div>
   </footer>
 
-  <script src="script.js?v=20261013-0300"></script>
+  <script src="script.js?v=20261013-0400"></script>
 </body>
 </html>
