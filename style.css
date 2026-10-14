@@ -178,3 +178,12 @@ body{background:
 @keyframes portfolioReveal{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
 @media(max-width:900px){.featured-project{grid-template-columns:1fr}.featured-project .demo-visual{min-height:330px}.featured-project .demo-copy{padding:28px}.portfolio-proof{grid-template-columns:1fr 1fr 1fr}.portfolio-proof div{display:grid;gap:4px}.portfolio-toolbar{align-items:flex-start;flex-direction:column}.portfolio-toolbar>p{align-self:flex-end}}
 @media(max-width:560px){.portfolio-proof{grid-template-columns:1fr}.portfolio-proof div{display:flex;padding:16px 18px}.portfolio-toolbar{padding:17px}.portfolio-filters{display:grid;grid-template-columns:1fr 1fr;width:100%}.portfolio-filter{text-align:center}.featured-project .demo-visual{min-height:285px}.featured-project .project-mini{min-height:215px}.featured-project .demo-copy{padding:24px 22px}.featured-project .demo-copy h3{font-size:25px}.demo-copy h3{font-size:20px}}
+
+
+/* Premium live-site presentation — v1100 */
+.demo-visual:before{content:"● SITIO FUNCIONAL";position:absolute;z-index:4;right:18px;top:17px;padding:7px 10px;border:1px solid rgba(116,242,207,.26);border-radius:999px;background:rgba(4,23,43,.8);backdrop-filter:blur(9px);color:#6ff0c3;font:800 8px Manrope;letter-spacing:.13em}
+.demo-card:hover .demo-visual .project-mini{transform:translateY(-4px) scale(1.01);box-shadow:0 28px 70px rgba(0,5,25,.36)}
+.demo-visual .project-mini{transition:transform .3s ease,box-shadow .3s ease}
+.project-open-link{border:1px solid rgba(35,213,243,.22);background:linear-gradient(100deg,rgba(17,205,235,.09),rgba(111,76,255,.1));padding:13px 15px;border-radius:12px;margin-top:18px}
+.project-open-link:hover{background:linear-gradient(100deg,rgba(17,205,235,.17),rgba(111,76,255,.18));border-color:rgba(35,213,243,.48)}
+@media(max-width:560px){.demo-visual:before{right:13px;top:13px;font-size:7px}.project-open-link{padding:12px 14px}}
