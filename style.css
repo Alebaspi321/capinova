@@ -143,3 +143,9 @@ body{background:
 .demo-card.demo-activated{border-color:rgba(34,211,238,.7);box-shadow:0 20px 55px rgba(14,165,233,.16)}.demo-card.demo-activated .project-mini{animation:demoPulse .42s ease}
 .project-brand.palette-alt .project-mini{background:linear-gradient(145deg,#fff7ed,#ffedd5)}.project-brand.palette-alt .mini-logo-mark{background:#0f766e}.project-brand.palette-alt .mini-swatches i:nth-child(1){background:#0f766e}.project-brand.palette-alt .mini-swatches i:nth-child(2){background:#14b8a6}.project-brand.palette-alt .mini-swatches i:nth-child(3){background:#f97316}.project-brand.palette-alt .mini-swatches i:nth-child(4){background:#fed7aa}
 @keyframes demoPulse{50%{transform:scale(1.015)}}@media(max-width:900px){.demo-grid{grid-template-columns:1fr}.demo-card{min-height:0}}@media(max-width:560px){.demo-grid{gap:18px}.demo-visual{min-height:265px;padding:18px}.demo-visual .project-mini{min-height:205px;padding:16px}.demo-copy{padding:22px}.live-demo-controls{align-items:flex-start}}@media(prefers-reduced-motion:reduce){.demo-card,.live-demo-controls button{transition:none}.demo-card.demo-activated .project-mini{animation:none}}
+
+
+/* Standalone functional project links — v0900 */
+.project-open-link{margin-top:auto;display:flex;align-items:center;justify-content:space-between;gap:12px;padding:15px 0 2px;border-top:1px solid rgba(150,184,230,.18);color:#fff;text-decoration:none;font-size:12px;font-weight:800;transition:color .2s ease}
+.project-open-link span{color:#18d6f4;font-size:20px;transition:transform .2s ease}
+.project-open-link:hover{color:#18d6f4}.project-open-link:hover span{transform:translateX(5px)}
