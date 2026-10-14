@@ -11,6 +11,8 @@ const projects=[
 {id:10,key:'estate',category:'PANEL INMOBILIARIO',title:'Hábitat',description:'Catálogo de propiedades con filtros, favoritos y solicitudes de visita.',action:'Busca una propiedad',copy:'Filtra, guarda favoritos y agenda una visita ficticia.',chips:['Inmobiliarias','Corredores','Construcción']}
 ];
 let currentId=Math.min(10,Math.max(1,Number(new URLSearchParams(location.search).get('id'))||1));
+const fullMode=new URLSearchParams(location.search).get('mode')==='full';
+if(fullMode) document.body.classList.add('full-demo');
 let cart=0,total=0,progress=68;
 const $=s=>document.querySelector(s);
 const money=n=>'Bs '+n.toLocaleString('es-BO');
@@ -30,7 +32,7 @@ const renders={pos:renderPOS,calendar:renderCalendar,analytics:renderAnalytics,r
 function render(){
  const p=projects[currentId-1],next=projects[currentId%10];
  document.title=p.title+' · Demo interactiva | CapiNova'; document.body.className='theme-'+p.key;
- $('#project-category').textContent=p.category;$('#project-title').textContent=p.title;$('#project-description').textContent=p.description;$('#project-counter').textContent=String(currentId).padStart(2,'0')+' / 10';$('#window-address').textContent=p.key+'.capinova.demo';$('#project-action-title').textContent=p.action;$('#project-action-copy').textContent=p.copy;$('#project-chips').innerHTML=p.chips.map(x=>'<span>'+x+'</span>').join('');$('#next-title').textContent=next.title;$('#next-card').href='?id='+next.id;$('#quote-link').href='https://wa.me/59174280209?text='+encodeURIComponent('Hola CapiNova, me interesa un proyecto similar a '+p.title+'.');$('#app-stage').innerHTML=renders[p.key]();$('#project-list').innerHTML=projects.map(x=>'<button class="project-nav-button '+(x.id===currentId?'active':'')+'" data-project="'+x.id+'"><span>'+String(x.id).padStart(2,'0')+'</span><b>'+x.title+'<small>'+x.category+'</small></b></button>').join('');history.replaceState(null,'','?id='+currentId);cart=0;total=0;progress=68;
+ $('#project-category').textContent=p.category;$('#project-title').textContent=p.title;$('#project-description').textContent=p.description;$('#project-counter').textContent=String(currentId).padStart(2,'0')+' / 10';$('#window-address').textContent=p.key+'.capinova.demo';$('#project-action-title').textContent=p.action;$('#project-action-copy').textContent=p.copy;$('#project-chips').innerHTML=p.chips.map(x=>'<span>'+x+'</span>').join('');$('#next-title').textContent=next.title;$('#next-card').href='?id='+next.id;$('#quote-link').href='https://wa.me/59174280209?text='+encodeURIComponent('Hola CapiNova, me interesa un proyecto similar a '+p.title+'.');$('#app-stage').innerHTML=renders[p.key]();$('#project-list').innerHTML=projects.map(x=>'<button class="project-nav-button '+(x.id===currentId?'active':'')+'" data-project="'+x.id+'"><span>'+String(x.id).padStart(2,'0')+'</span><b>'+x.title+'<small>'+x.category+'</small></b></button>').join('');history.replaceState(null,'','?id='+currentId+(fullMode?'&mode=full':''));const fullCounter=document.querySelector('#full-counter');if(fullCounter) fullCounter.textContent=String(currentId).padStart(2,'0')+' / 10';cart=0;total=0;progress=68;
 }
 document.addEventListener('click',e=>{
  const project=e.target.closest('[data-project]');if(project){currentId=Number(project.dataset.project);render();scrollTo({top:0,behavior:'smooth'});return}
@@ -53,5 +55,6 @@ document.addEventListener('click',e=>{
  else if(a==='notify'||a==='exportar-resumen'||a==='descargar-guía'||a==='ver-certificado'||a==='agendar-visita'||a==='nueva-tarea'||a==='nueva-cita'){toast('Acción disponible en el proyecto final')}
 });
 $('#previous-project').addEventListener('click',()=>{currentId=currentId===1?10:currentId-1;render()});$('#next-project').addEventListener('click',()=>{currentId=currentId===10?1:currentId+1;render()});
+const fullPrev=document.querySelector('#full-prev'),fullNext=document.querySelector('#full-next');if(fullPrev)fullPrev.addEventListener('click',()=>{currentId=currentId===1?10:currentId-1;render()});if(fullNext)fullNext.addEventListener('click',()=>{currentId=currentId===10?1:currentId+1;render()});
 document.addEventListener('change',e=>{if(e.target.id==='zone-filter'){document.querySelectorAll('[data-zone]').forEach(card=>card.hidden=e.target.value!=='all'&&card.dataset.zone!==e.target.value);toast('Propiedades filtradas')}});
 render();
