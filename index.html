@@ -13,7 +13,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css?v=20261013-0400">
+  <link rel="stylesheet" href="style.css?v=20261013-0500">
 </head>
 <body>
   <div class="page-glow glow-one"></div>
@@ -37,7 +37,7 @@
         <a href="#que-es">¿Qué es?</a>
         <a href="#servicios">Servicios</a>
         <a href="#proceso">Cómo trabajamos</a>
-        <a href="#portafolio">Portafolio</a>
+        <a href="#configurador">Arma tu paquete</a>\n        <a href="#portafolio">Demos</a>
         <a href="#contacto" class="nav-cta">Cotizar proyecto</a>
       </nav>
     </div>
@@ -164,6 +164,93 @@
       </div>
     </section>
 
+    <section class="section package-builder-section" id="configurador">
+      <div class="container">
+        <div class="section-heading builder-heading">
+          <span class="eyebrow">ARMA TU SOLUCIÓN</span>
+          <h2>Cuéntanos tu rubro y construye tu paquete ideal.</h2>
+          <p>Selecciona lo que necesita tu negocio. Te sugerimos una combinación y preparamos el mensaje para enviarlo por WhatsApp.</p>
+        </div>
+
+        <div class="package-builder">
+          <form class="builder-form" id="package-form">
+            <div class="builder-step">
+              <span class="step-number">01</span>
+              <div class="step-content">
+                <label for="business-type">¿Cuál es tu rubro?</label>
+                <select id="business-type" name="businessType">
+                  <option value="">Selecciona una opción</option>
+                  <option value="restaurante">Restaurante o cafetería</option>
+                  <option value="comercio">Tienda o comercio</option>
+                  <option value="profesional">Servicios profesionales</option>
+                  <option value="salud">Salud y bienestar</option>
+                  <option value="educacion">Educación o capacitación</option>
+                  <option value="inmobiliaria">Inmobiliaria o construcción</option>
+                  <option value="turismo">Turismo, hotelería o eventos</option>
+                  <option value="emprendimiento">Emprendimiento o marca personal</option>
+                  <option value="otro">Otro rubro</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="builder-step">
+              <span class="step-number">02</span>
+              <fieldset class="step-content">
+                <legend>¿Qué quieres mejorar?</legend>
+                <div class="need-grid">
+                  <label class="need-option"><input type="checkbox" name="service" value="Sistema de gestión"><span><b>⌘</b><strong>Sistema de gestión</strong><small>Clientes, ventas, inventario o procesos.</small></span></label>
+                  <label class="need-option"><input type="checkbox" name="service" value="Página web"><span><b>◎</b><strong>Página web</strong><small>Presencia profesional y contacto.</small></span></label>
+                  <label class="need-option"><input type="checkbox" name="service" value="Automatización"><span><b>↻</b><strong>Automatización</strong><small>Menos tareas manuales y repetitivas.</small></span></label>
+                  <label class="need-option"><input type="checkbox" name="service" value="Dashboard y datos"><span><b>▥</b><strong>Dashboard y datos</strong><small>Indicadores para tomar decisiones.</small></span></label>
+                  <label class="need-option"><input type="checkbox" name="service" value="Diseño y branding"><span><b>✦</b><strong>Diseño y branding</strong><small>Identidad visual coherente.</small></span></label>
+                  <label class="need-option"><input type="checkbox" name="service" value="Contenido para redes"><span><b>◫</b><strong>Contenido para redes</strong><small>Piezas para comunicar y crecer.</small></span></label>
+                </div>
+              </fieldset>
+            </div>
+
+            <div class="builder-step">
+              <span class="step-number">03</span>
+              <fieldset class="step-content">
+                <legend>¿Cómo quieres usar la solución?</legend>
+                <div class="delivery-grid">
+                  <label class="delivery-option"><input type="radio" name="delivery" value="En internet, con servidor y dominio" checked><span><strong>En internet</strong><small>Servidor, dominio y acceso desde cualquier lugar.</small></span></label>
+                  <label class="delivery-option"><input type="radio" name="delivery" value="Instalada en una computadora local"><span><strong>En mi computadora</strong><small>Uso local desde un equipo del negocio.</small></span></label>
+                  <label class="delivery-option"><input type="radio" name="delivery" value="Opción híbrida: internet y respaldo local"><span><strong>Modalidad híbrida</strong><small>Acceso web con apoyo o respaldo local.</small></span></label>
+                </div>
+              </fieldset>
+            </div>
+
+            <div class="builder-step">
+              <span class="step-number">04</span>
+              <div class="step-content">
+                <label for="project-detail">Algo más que debamos saber <small>(opcional)</small></label>
+                <textarea id="project-detail" rows="3" placeholder="Ejemplo: necesito controlar ventas, inventario y recibir pedidos..."></textarea>
+              </div>
+            </div>
+          </form>
+
+          <aside class="builder-summary" aria-live="polite">
+            <span class="summary-kicker">TU PROPUESTA INICIAL</span>
+            <h3 id="summary-title">Selecciona tu rubro para comenzar</h3>
+            <p id="summary-text">Te mostraremos una recomendación orientativa según el tipo de negocio.</p>
+            <div class="recommendation-box">
+              <small>Recomendamos empezar con</small>
+              <ul id="recommended-list"><li>Elige un rubro y te ayudamos a priorizar.</li></ul>
+            </div>
+            <div class="selected-summary">
+              <small>Servicios seleccionados</small>
+              <p id="selected-services">Ninguno todavía</p>
+            </div>
+            <a class="btn btn-primary builder-whatsapp disabled" id="builder-whatsapp" href="#" target="_blank" rel="noopener" aria-disabled="true">
+              <svg viewBox="0 0 32 32" aria-hidden="true"><path fill="currentColor" d="M16.04 3A12.9 12.9 0 0 0 5.08 22.72L3.35 29l6.43-1.69A12.95 12.95 0 1 0 16.04 3Zm0 2.18a10.76 10.76 0 1 1-5.49 20.01l-.39-.23-3.82 1 1.02-3.72-.25-.4a10.74 10.74 0 0 1 8.93-16.66Z"/></svg>
+              Enviar mi idea por WhatsApp
+            </a>
+            <small class="summary-note">La recomendación es orientativa. Confirmamos alcance y costos después de conocer tu necesidad.</small>
+          </aside>
+        </div>
+      </div>
+    </section>
+
     <section class="section section-soft" id="proceso">
       <div class="container">
         <div class="section-heading">
@@ -190,41 +277,47 @@
           <p>Esta sección irá creciendo con proyectos reales de sistemas, web, automatización, datos y diseño.</p>
         </div>
 
-        <div class="portfolio-grid">
-          <article class="portfolio-card large">
-            <div class="mock-window">
-              <div class="mock-top"><span></span><span></span><span></span></div>
-              <div class="mock-body">
-                <div class="mock-sidebar"></div>
-                <div class="mock-main">
-                  <div class="mock-stats"><i></i><i></i><i></i></div>
-                  <div class="mock-chart"></div>
-                </div>
-              </div>
-            </div>
-            <div class="portfolio-copy">
-              <span>SISTEMAS + DATOS</span>
-              <h3>Plataformas internas y dashboards</h3>
-              <p>Información centralizada, indicadores y procesos en un solo lugar.</p>
-            </div>
+        <div class="demo-notice"><span>10</span><p>Propuestas demostrativas para visualizar distintos tipos de proyectos. No representan clientes ni datos reales.</p></div>
+        <div class="portfolio-grid demo-grid">
+          <article class="demo-card">
+            <div class="demo-visual demo-sales"><span>▥</span><i>DEMO 01</i></div>
+            <div class="demo-copy"><span>SISTEMAS</span><h3>Sistema comercial</h3><p>Ventas, inventario, clientes y reportes.</p><small>Demo conceptual · Sin datos reales</small></div>
           </article>
-
-          <article class="portfolio-card">
-            <div class="visual-block web-block">WEB</div>
-            <div class="portfolio-copy">
-              <span>WEB</span>
-              <h3>Sitios profesionales</h3>
-              <p>Diseño moderno, rápido y adaptable a cualquier dispositivo.</p>
-            </div>
+          <article class="demo-card">
+            <div class="demo-visual demo-calendar"><span>▦</span><i>DEMO 02</i></div>
+            <div class="demo-copy"><span>SISTEMAS</span><h3>Agenda de citas</h3><p>Reservas, horarios y seguimiento de clientes.</p><small>Demo conceptual · Sin datos reales</small></div>
           </article>
-
-          <article class="portfolio-card">
-            <div class="visual-block auto-block">↻</div>
-            <div class="portfolio-copy">
-              <span>AUTOMATIZACIÓN</span>
-              <h3>Procesos inteligentes</h3>
-              <p>Menos tareas repetitivas y más tiempo para lo importante.</p>
-            </div>
+          <article class="demo-card">
+            <div class="demo-visual demo-dashboard"><span>◫</span><i>DEMO 03</i></div>
+            <div class="demo-copy"><span>DATOS</span><h3>Dashboard ejecutivo</h3><p>Indicadores visuales para decisiones rápidas.</p><small>Demo conceptual · Sin datos reales</small></div>
+          </article>
+          <article class="demo-card">
+            <div class="demo-visual demo-food"><span>◉</span><i>DEMO 04</i></div>
+            <div class="demo-copy"><span>WEB</span><h3>Web para restaurante</h3><p>Menú, reservas, ubicación y contacto.</p><small>Demo conceptual · Sin datos reales</small></div>
+          </article>
+          <article class="demo-card">
+            <div class="demo-visual demo-shop"><span>◇</span><i>DEMO 05</i></div>
+            <div class="demo-copy"><span>WEB</span><h3>Catálogo para tienda</h3><p>Productos organizados y pedidos por WhatsApp.</p><small>Demo conceptual · Sin datos reales</small></div>
+          </article>
+          <article class="demo-card">
+            <div class="demo-visual demo-project"><span>✓</span><i>DEMO 06</i></div>
+            <div class="demo-copy"><span>SISTEMAS</span><h3>Control de proyectos</h3><p>Tareas, avances, responsables y fechas.</p><small>Demo conceptual · Sin datos reales</small></div>
+          </article>
+          <article class="demo-card">
+            <div class="demo-visual demo-auto"><span>↻</span><i>DEMO 07</i></div>
+            <div class="demo-copy"><span>AUTOMATIZACIÓN</span><h3>Automatización de documentos</h3><p>Formularios, PDFs y correos automáticos.</p><small>Demo conceptual · Sin datos reales</small></div>
+          </article>
+          <article class="demo-card">
+            <div class="demo-visual demo-education"><span>△</span><i>DEMO 08</i></div>
+            <div class="demo-copy"><span>WEB + SISTEMAS</span><h3>Portal educativo</h3><p>Cursos, materiales y seguimiento básico.</p><small>Demo conceptual · Sin datos reales</small></div>
+          </article>
+          <article class="demo-card">
+            <div class="demo-visual demo-brand"><span>✦</span><i>DEMO 09</i></div>
+            <div class="demo-copy"><span>BRANDING</span><h3>Identidad para marca</h3><p>Logo, paleta y piezas para redes sociales.</p><small>Demo conceptual · Sin datos reales</small></div>
+          </article>
+          <article class="demo-card">
+            <div class="demo-visual demo-realestate"><span>⌂</span><i>DEMO 10</i></div>
+            <div class="demo-copy"><span>SISTEMAS + WEB</span><h3>Panel inmobiliario</h3><p>Propiedades, contactos y seguimiento comercial.</p><small>Demo conceptual · Sin datos reales</small></div>
           </article>
         </div>
       </div>
@@ -283,6 +376,6 @@
     </div>
   </footer>
 
-  <script src="script.js?v=20261013-0400"></script>
+  <script src="script.js?v=20261013-0500"></script>
 </body>
 </html>
