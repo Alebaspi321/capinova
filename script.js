@@ -157,6 +157,8 @@ function openProjectModal(projectId, trigger) {
   document.getElementById('metric-b').textContent = project.metrics[1];
   document.getElementById('metric-c').textContent = project.metrics[2];
   document.getElementById('project-modal-cta').href = 'https://wa.me/59174280209?text=' + encodeURIComponent('Hola CapiNova, me interesa crear algo similar al proyecto conceptual: ' + project.title + '.');
+  const currentPreview = projectModal.querySelector('.preview-app');
+  if (currentPreview) currentPreview.outerHTML = buildProjectPreview(String(projectId));
   projectModal.hidden = false;
   document.body.classList.add('project-modal-open');
   projectModal.querySelector('.project-modal-close')?.focus();
@@ -170,3 +172,20 @@ function closeProjectModal() {
 document.querySelectorAll('.project-view').forEach((button) => button.addEventListener('click', () => openProjectModal(button.dataset.project, button)));
 projectModal?.querySelectorAll('[data-close-modal]').forEach((element) => element.addEventListener('click', closeProjectModal));
 document.addEventListener('keydown', (event) => { if (event.key === 'Escape' && projectModal && !projectModal.hidden) closeProjectModal(); });
+
+
+function buildProjectPreview(projectId) {
+  const templates = {
+    '1': '<div class="preview-app variant variant-pos"><div class="variant-shell"><div class="variant-title"><b>NovaPOS · Punto de venta</b><span>Caja abierta</span></div><div class="variant-grid"><div class="variant-card product-panel"><i></i><i></i><i></i><i></i><i></i><i></i></div><div class="variant-card checkout"><small>Venta actual</small><strong>Bs 248,00</strong><span>5 productos</span><button>Cobrar venta</button></div></div></div></div>',
+    '2': '<div class="preview-app variant variant-calendar"><div class="variant-shell"><div class="variant-title"><b>CitaFlow · Octubre</b><span>Vista semanal</span></div><div class="variant-grid"><div class="variant-card big-calendar">' + '<i></i>'.repeat(35) + '</div><div class="variant-card appointment-list"><b>Próximas citas</b><span>09:30 · Consulta</span><span>11:00 · Seguimiento</span><span>15:45 · Evaluación</span></div></div></div></div>',
+    '3': '<div class="preview-app variant variant-analytics"><div class="variant-shell"><div class="variant-title"><b>Pulso · Resumen ejecutivo</b><span>Este mes</span></div><div class="variant-grid"><div class="variant-card wide"><b>Rendimiento</b><div class="fake-chart"></div></div><div class="variant-card"><b>+18%</b><small>Crecimiento</small></div><div class="variant-card"><b>74%</b><small>Meta alcanzada</small></div><div class="variant-card"><b>9</b><small>Alertas</small></div></div></div></div>',
+    '4': '<div class="preview-app variant variant-restaurant"><div class="variant-shell"><div class="variant-title"><b>Sazón · Nuestro menú</b><span>Reservar mesa</span></div><div class="menu-showcase"><div><i>🍲</i><b>Sopa andina</b><small>Especial de la casa</small></div><div><i>🥗</i><b>Ensalada fresca</b><small>Ingredientes locales</small></div><div><i>🍰</i><b>Postre artesanal</b><small>Dulce del día</small></div></div></div></div>',
+    '5': '<div class="preview-app variant variant-shop"><div class="variant-shell"><div class="variant-title"><b>Nexo · Catálogo</b><span>12 productos</span></div><div class="variant-grid">' + '<div class="variant-card shop-product"><i></i><b>Producto destacado</b><small>Consultar por WhatsApp</small></div>'.repeat(4) + '</div></div></div>',
+    '6': '<div class="preview-app variant variant-kanban"><div class="variant-shell"><div class="variant-title"><b>Orbe · Proyecto web</b><span>68% completado</span></div><div class="variant-grid"><div class="variant-card kanban-col"><b>Ideas</b><span></span><span></span></div><div class="variant-card kanban-col"><b>En curso</b><span></span><span></span><span></span></div><div class="variant-card kanban-col"><b>Listo</b><span></span><span></span></div></div></div></div>',
+    '7': '<div class="preview-app variant variant-flow"><div class="variant-shell"><div class="variant-title"><b>DocuFlow · Automatización activa</b><span>98% exitoso</span></div><div class="variant-grid"><div class="flow-node">Formulario recibido</div><i class="flow-arrow">→</i><div class="flow-node">PDF generado</div><i class="flow-arrow">→</i><div class="flow-node">Correo enviado</div></div></div></div>',
+    '8': '<div class="preview-app variant variant-learning"><div class="variant-shell"><div class="variant-title"><b>AulaNova · Diseño digital</b><span>72% de avance</span></div><div class="variant-grid"><div class="variant-card course-video">▶</div><div class="lesson-stack"><span>01 · Fundamentos</span><span>02 · Herramientas</span><span>03 · Proyecto práctico</span><span>04 · Evaluación</span></div></div></div></div>',
+    '9': '<div class="preview-app variant variant-brand"><div class="variant-shell"><div class="variant-title"><b>Luma · Sistema de identidad</b><span>Brand board</span></div><div class="brand-board"><div class="brand-hero">L</div><div class="brand-assets"><span></span><span></span><span></span><span></span></div></div></div></div>',
+    '10':'<div class="preview-app variant variant-estate"><div class="variant-shell"><div class="variant-title"><b>Hábitat · Propiedad destacada</b><span>48 inmuebles</span></div><div class="variant-grid"><div class="variant-card property-hero">⌂ Casa Aurora</div><div class="variant-card property-details"><b>$ 128.000</b><span>3 dormitorios</span><span>2 baños</span><span>180 m²</span><span>Agendar visita</span></div></div></div></div>'
+  };
+  return templates[projectId] || templates['1'];
+}
