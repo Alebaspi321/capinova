@@ -189,3 +189,27 @@ function buildProjectPreview(projectId) {
   };
   return templates[projectId] || templates['1'];
 }
+
+
+// Interactive previews inside portfolio cards
+const liveDemoState = { pos: 248, shop: 0, analytics: 0, kanban: 5, learning: 72, estate: 1, brand: false };
+document.addEventListener('click', (event) => {
+  const control = event.target.closest('[data-live-demo]');
+  if (!control) return;
+  event.preventDefault(); event.stopPropagation();
+  const card = control.closest('.demo-card');
+  const output = card?.querySelector('[data-demo-output]');
+  const type = control.dataset.liveDemo;
+  card?.classList.add('demo-activated');
+  window.setTimeout(() => card?.classList.remove('demo-activated'), 450);
+  if (type === 'pos') { liveDemoState.pos += 36; if (output) output.textContent = 'Bs ' + liveDemoState.pos; }
+  if (type === 'calendar') { card.querySelectorAll('[data-live-demo="calendar"]').forEach((button) => button.classList.toggle('is-active', button === control)); if (output) output.textContent = control.dataset.value + ' · Cita seleccionada'; }
+  if (type === 'analytics') { const periods = ['Esta semana', 'Últimos 30 días', 'Este trimestre']; liveDemoState.analytics = (liveDemoState.analytics + 1) % periods.length; if (output) output.textContent = periods[liveDemoState.analytics]; }
+  if (type === 'restaurant') { if (output) output.textContent = output.textContent.includes('Menú') ? '3 platos destacados' : 'Menú del día disponible'; }
+  if (type === 'shop') { liveDemoState.shop += 1; if (output) output.textContent = 'Carrito · ' + liveDemoState.shop; }
+  if (type === 'kanban') { liveDemoState.kanban = Math.max(1, liveDemoState.kanban - 1); if (output) output.textContent = liveDemoState.kanban + ' tareas activas'; }
+  if (type === 'flow') { if (output) { output.textContent = 'Procesando…'; window.setTimeout(() => { output.textContent = '✓ Flujo completado'; }, 700); } }
+  if (type === 'learning') { liveDemoState.learning = Math.min(100, liveDemoState.learning + 7); if (output) output.textContent = liveDemoState.learning + '% completado'; }
+  if (type === 'brand') { liveDemoState.brand = !liveDemoState.brand; card.classList.toggle('palette-alt', liveDemoState.brand); if (output) output.textContent = liveDemoState.brand ? 'Paleta Terracota' : 'Paleta Luma'; }
+  if (type === 'estate') { liveDemoState.estate = liveDemoState.estate % 3 + 1; const properties = ['Casa Aurora', 'Loft Central', 'Residencia Norte']; const title = card.querySelector('.mini-property-main b'); if (title) title.textContent = properties[liveDemoState.estate - 1]; if (output) output.textContent = liveDemoState.estate + ' de 3'; }
+});
