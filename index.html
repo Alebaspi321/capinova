@@ -13,7 +13,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css?v=20261013-0900">
+  <link rel="stylesheet" href="style.css?v=20261013-1000">
 </head>
 <body>
   <div class="page-glow glow-one"></div>
@@ -273,50 +273,65 @@
         <div class="section-heading portfolio-heading">
           <div>
             <span class="eyebrow">PORTAFOLIO</span>
-            <h2>Catálogo de proyectos ficticios para visualizar ideas.</h2>
+            <h2>Ideas diseñadas como experiencias digitales.</h2>
           </div>
-          <p>Explora ejemplos completos de cómo podría verse una solución para distintos negocios.</p>
+          <p>Explora soluciones conceptuales con interfaz propia, interacción real y una demostración completa para cada rubro.</p>
         </div>
 
         <div class="demo-notice"><span>10</span><p>Trabajos conceptuales creados por CapiNova para mostrar posibilidades. Son proyectos ficticios y no contienen datos de personas o empresas reales.</p></div>
+        <div class="portfolio-proof" aria-label="Características del portafolio">
+          <div><strong>10</strong><span>conceptos digitales</span></div>
+          <div><strong>100%</strong><span>adaptables a celular</span></div>
+          <div><strong>Interactivos</strong><span>demos que puedes probar</span></div>
+        </div>
+        <div class="portfolio-toolbar">
+          <div><small>FILTRAR PROYECTOS</small><div class="portfolio-filters" role="group" aria-label="Filtrar proyectos">
+            <button class="portfolio-filter active" type="button" data-portfolio-filter="all">Todos</button>
+            <button class="portfolio-filter" type="button" data-portfolio-filter="system">Sistemas</button>
+            <button class="portfolio-filter" type="button" data-portfolio-filter="web">Web y tiendas</button>
+            <button class="portfolio-filter" type="button" data-portfolio-filter="data">Datos</button>
+            <button class="portfolio-filter" type="button" data-portfolio-filter="brand">Marca</button>
+          </div></div>
+          <p><span id="portfolio-count">10</span> proyectos disponibles</p>
+        </div>
         <div class="portfolio-grid demo-grid">
-          <article class="demo-card project-pos">
+          <article class="demo-card project-pos featured-project" data-portfolio-category="system">
             <div class="demo-visual visual-pos"><div class="project-mini"><div class="mini-pos-head"><b>NovaPOS</b><i>●</i></div><div class="mini-products"><span></span><span></span><span></span></div><div class="mini-total"><small>Total de venta</small><strong data-demo-output>Bs 248</strong></div><div class="live-demo-controls"><button type="button" data-live-demo="pos" onclick="event.stopImmediatePropagation();const o=this.closest('.demo-card').querySelector('[data-demo-output]');o.textContent='Bs '+(Number(o.textContent.replace(/\D/g,''))+36)">+ Agregar producto</button><span>Demo interactiva</span></div></div><em>PROYECTO 01</em></div>
             <div class="demo-copy"><span>SISTEMAS</span><h3>Sistema comercial NovaPOS</h3><p>Ventas, inventario, clientes y reportes.</p><small>Proyecto ficticio · Sin datos reales</small><a class="project-open-link" href="./proyecto.html?id=1">Abrir demo funcional <span>→</span></a></div>
           </article>
-          <article class="demo-card project-calendar">
+          <article class="demo-card project-calendar" data-portfolio-category="system">
             <div class="demo-visual visual-calendar"><div class="project-mini"><div class="mini-cal-head"><b>Octubre</b><span>‹ ›</span></div><div class="mini-cal-grid"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div><div class="mini-appointment" data-demo-output>09:30 · Horario disponible</div><div class="live-demo-controls time-choices"><button type="button" data-live-demo="calendar" onclick="event.stopImmediatePropagation();const c=this.closest('.demo-card');c.querySelectorAll('[data-live-demo=calendar]').forEach(b=>b.classList.toggle('is-active',b===this));c.querySelector('[data-demo-output]').textContent=this.dataset.value+' · Cita seleccionada'" data-value="09:30">09:30</button><button type="button" data-live-demo="calendar" onclick="event.stopImmediatePropagation();const c=this.closest('.demo-card');c.querySelectorAll('[data-live-demo=calendar]').forEach(b=>b.classList.toggle('is-active',b===this));c.querySelector('[data-demo-output]').textContent=this.dataset.value+' · Cita seleccionada'" data-value="11:00">11:00</button><button type="button" data-live-demo="calendar" onclick="event.stopImmediatePropagation();const c=this.closest('.demo-card');c.querySelectorAll('[data-live-demo=calendar]').forEach(b=>b.classList.toggle('is-active',b===this));c.querySelector('[data-demo-output]').textContent=this.dataset.value+' · Cita seleccionada'" data-value="15:30">15:30</button></div></div><em>PROYECTO 02</em></div>
             <div class="demo-copy"><span>SISTEMAS</span><h3>Agenda inteligente CitaFlow</h3><p>Reservas, horarios y seguimiento de clientes.</p><small>Proyecto ficticio · Sin datos reales</small><a class="project-open-link" href="./proyecto.html?id=2">Abrir demo funcional <span>→</span></a></div>
           </article>
-          <article class="demo-card project-analytics">
+          <article class="demo-card project-analytics" data-portfolio-category="data">
             <div class="demo-visual visual-analytics"><div class="project-mini"><div class="mini-kpis"><span>+18%</span><span>74%</span><span>9</span></div><div class="mini-bars"><i></i><i></i><i></i><i></i><i></i><i></i></div><div class="mini-line"></div><div class="live-demo-controls"><button type="button" data-live-demo="analytics" onclick="event.stopImmediatePropagation();const o=this.closest('.demo-card').querySelector('[data-demo-output]');o.textContent=o.textContent==='Esta semana'?'Este trimestre':'Esta semana'">Cambiar periodo</button><span data-demo-output>Últimos 30 días</span></div></div><em>PROYECTO 03</em></div>
             <div class="demo-copy"><span>DATOS</span><h3>Dashboard ejecutivo Pulso</h3><p>Indicadores visuales para decisiones rápidas.</p><small>Proyecto ficticio · Sin datos reales</small><a class="project-open-link" href="./proyecto.html?id=3">Abrir demo funcional <span>→</span></a></div>
           </article>
-          <article class="demo-card project-restaurant">
+          <article class="demo-card project-restaurant" data-portfolio-category="web">
             <div class="demo-visual visual-restaurant"><div class="project-mini"><div class="mini-food-title">Sazón<span>MENÚ</span></div><div class="mini-dishes"><i>🍲</i><i>🥗</i><i>🍰</i></div><div class="mini-reserve" data-demo-output>3 platos destacados</div><div class="live-demo-controls"><button type="button" data-live-demo="restaurant" onclick="event.stopImmediatePropagation();this.closest('.demo-card').querySelector('[data-demo-output]').textContent='Menú del día disponible'">Ver menú del día</button><span>Reserva rápida</span></div></div><em>PROYECTO 04</em></div>
             <div class="demo-copy"><span>WEB</span><h3>Restaurante Sazón</h3><p>Menú, reservas, ubicación y contacto.</p><small>Proyecto ficticio · Sin datos reales</small><a class="project-open-link" href="./proyecto.html?id=4">Abrir demo funcional <span>→</span></a></div>
           </article>
-          <article class="demo-card project-shop">
+          <article class="demo-card project-shop" data-portfolio-category="web">
             <div class="demo-visual visual-shop"><div class="project-mini"><div class="mini-shop-head"><b>NEXO</b><span>⌕  ◇</span></div><div class="mini-shop-grid"><i></i><i></i><i></i><i></i></div><div class="live-demo-controls"><button type="button" data-live-demo="shop" onclick="event.stopImmediatePropagation();const o=this.closest('.demo-card').querySelector('[data-demo-output]');o.textContent='Carrito · '+(Number(o.textContent.split('·')[1])+1)">+ Añadir al pedido</button><span data-demo-output>Carrito · 0</span></div></div><em>PROYECTO 05</em></div>
             <div class="demo-copy"><span>WEB</span><h3>Catálogo Tienda Nexo</h3><p>Productos organizados y pedidos por WhatsApp.</p><small>Proyecto ficticio · Sin datos reales</small><a class="project-open-link" href="./proyecto.html?id=5">Abrir demo funcional <span>→</span></a></div>
           </article>
-          <article class="demo-card project-kanban">
+          <article class="demo-card project-kanban" data-portfolio-category="system">
             <div class="demo-visual visual-kanban"><div class="project-mini"><div class="mini-board"><div><b>Ideas</b><i></i><i></i></div><div><b>En curso</b><i></i><i></i></div><div><b>Listo</b><i></i></div></div><div class="live-demo-controls"><button type="button" data-live-demo="kanban" onclick="event.stopImmediatePropagation();const o=this.closest('.demo-card').querySelector('[data-demo-output]');o.textContent='4 tareas activas'">Mover tarea</button><span data-demo-output>5 tareas activas</span></div></div><em>PROYECTO 06</em></div>
             <div class="demo-copy"><span>SISTEMAS</span><h3>Gestor de proyectos Orbe</h3><p>Tareas, avances, responsables y fechas.</p><small>Proyecto ficticio · Sin datos reales</small><a class="project-open-link" href="./proyecto.html?id=6">Abrir demo funcional <span>→</span></a></div>
           </article>
-          <article class="demo-card project-flow">
+          <article class="demo-card project-flow" data-portfolio-category="system">
             <div class="demo-visual visual-flow"><div class="project-mini"><div class="mini-flow"><span>Formulario</span><i>→</i><span>PDF</span><i>→</i><span>Correo</span></div><div class="mini-flow-status" data-demo-output>Listo para ejecutar</div><div class="live-demo-controls"><button type="button" data-live-demo="flow" onclick="event.stopImmediatePropagation();const o=this.closest('.demo-card').querySelector('[data-demo-output]');o.textContent='Procesando…';setTimeout(()=>o.textContent='✓ Flujo completado',700)">▶ Ejecutar flujo</button><span>3 pasos</span></div></div><em>PROYECTO 07</em></div>
             <div class="demo-copy"><span>AUTOMATIZACIÓN</span><h3>Automatización DocuFlow</h3><p>Formularios, PDFs y correos automáticos.</p><small>Proyecto ficticio · Sin datos reales</small><a class="project-open-link" href="./proyecto.html?id=7">Abrir demo funcional <span>→</span></a></div>
           </article>
-          <article class="demo-card project-learning">
+          <article class="demo-card project-learning" data-portfolio-category="web">
             <div class="demo-visual visual-learning"><div class="project-mini"><div class="mini-course"><i>▶</i><div><b>Diseño digital</b><span></span><small>72% completado</small></div></div><div class="mini-lessons"><span></span><span></span><span></span></div><div class="live-demo-controls"><button type="button" data-live-demo="learning" onclick="event.stopImmediatePropagation();const o=this.closest('.demo-card').querySelector('[data-demo-output]');o.textContent=Math.min(100,Number(o.textContent.replace(/\D/g,''))+7)+'% completado'">Continuar clase</button><span data-demo-output>72% completado</span></div></div><em>PROYECTO 08</em></div>
             <div class="demo-copy"><span>WEB + SISTEMAS</span><h3>Portal educativo AulaNova</h3><p>Cursos, materiales y seguimiento básico.</p><small>Proyecto ficticio · Sin datos reales</small><a class="project-open-link" href="./proyecto.html?id=8">Abrir demo funcional <span>→</span></a></div>
           </article>
-          <article class="demo-card project-brand">
+          <article class="demo-card project-brand" data-portfolio-category="brand">
             <div class="demo-visual visual-brand"><div class="project-mini"><div class="mini-logo-mark">L</div><div class="mini-brand-name">LUMA<small>estudio creativo</small></div><div class="mini-swatches"><i></i><i></i><i></i><i></i></div><div class="live-demo-controls"><button type="button" data-live-demo="brand" onclick="event.stopImmediatePropagation();const c=this.closest('.demo-card');c.classList.toggle('palette-alt');c.querySelector('[data-demo-output]').textContent=c.classList.contains('palette-alt')?'Paleta Terracota':'Paleta Luma'">Cambiar paleta</button><span data-demo-output>Paleta Luma</span></div></div><em>PROYECTO 09</em></div>
             <div class="demo-copy"><span>BRANDING</span><h3>Identidad visual Luma</h3><p>Logo, paleta y piezas para redes sociales.</p><small>Proyecto ficticio · Sin datos reales</small><a class="project-open-link" href="./proyecto.html?id=9">Abrir demo funcional <span>→</span></a></div>
           </article>
-          <article class="demo-card project-estate">
+          <article class="demo-card project-estate" data-portfolio-category="web">
             <div class="demo-visual visual-estate"><div class="project-mini"><div class="mini-property-main"><i>⌂</i><b>Casa Aurora</b><small>$ 128.000</small></div><div class="mini-property-row"><span></span><span></span><span></span></div><div class="live-demo-controls"><button type="button" data-live-demo="estate" onclick="event.stopImmediatePropagation();const c=this.closest('.demo-card'),o=c.querySelector('[data-demo-output]'),n=Number(o.textContent[0])%3+1,names=['Casa Aurora','Loft Central','Residencia Norte'];c.querySelector('.mini-property-main b').textContent=names[n-1];o.textContent=n+' de 3'">Siguiente propiedad</button><span data-demo-output>1 de 3</span></div></div><em>PROYECTO 10</em></div>
             <div class="demo-copy"><span>SISTEMAS + WEB</span><h3>Panel inmobiliario Hábitat</h3><p>Propiedades, contactos y seguimiento comercial.</p><small>Proyecto ficticio · Sin datos reales</small><a class="project-open-link" href="./proyecto.html?id=10">Abrir demo funcional <span>→</span></a></div>
           </article>
@@ -403,6 +418,6 @@
     </div>
   </footer>
 
-  <script src="script.js?v=20261013-0900"></script>
+  <script src="script.js?v=20261013-1000"></script>
 </body>
 </html>
