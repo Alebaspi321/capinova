@@ -116,7 +116,7 @@ function updatePackageBuilder() {
       'Sugerencia mostrada: ' + recommendation.services.join(', ')
     ];
     if (details) lines.push('Detalle adicional: ' + details);
-    builderWhatsApp.href = 'https://wa.me/59174280209?text=' + encodeURIComponent(lines.join('\\n'));
+    builderWhatsApp.href = 'https://wa.me/59174280209?text=' + encodeURIComponent(lines.join('\n'));
   } else {
     builderWhatsApp.href = '#configurador';
   }
