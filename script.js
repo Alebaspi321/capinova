@@ -125,3 +125,48 @@ function updatePackageBuilder() {
 packageForm?.addEventListener('change', updatePackageBuilder);
 projectDetail?.addEventListener('input', updatePackageBuilder);
 updatePackageBuilder();
+
+
+const fictionalProjects = {
+  1:{title:'Sistema comercial NovaPOS',category:'SISTEMAS',description:'Panel conceptual para centralizar ventas, inventario, clientes y reportes de una tienda.',objective:'Reducir registros dispersos y conocer el estado del negocio en un solo lugar.',features:['Ventas y comprobantes','Inventario y alertas','Clientes y reportes'],screen:'Resumen comercial',short:'NP',metrics:['Bs 8.450','86%','124']},
+  2:{title:'Agenda inteligente CitaFlow',category:'SISTEMAS',description:'Experiencia ficticia de reservas para profesionales, centros de salud y servicios.',objective:'Organizar horarios, reducir cruces de citas y mejorar el seguimiento.',features:['Calendario visual','Ficha de clientes','Recordatorios'],screen:'Agenda de hoy',short:'CF',metrics:['18','92%','6']},
+  3:{title:'Dashboard Pulso',category:'DATOS',description:'Tablero ejecutivo conceptual con indicadores de ventas, gastos y rendimiento.',objective:'Convertir información dispersa en decisiones rápidas y comprensibles.',features:['Indicadores clave','Comparación mensual','Alertas visuales'],screen:'Indicadores del negocio',short:'PL',metrics:['+18%','74%','9']},
+  4:{title:'Restaurante Sazón Web',category:'WEB',description:'Sitio ficticio para restaurante con menú visual, reservas, ubicación y contacto.',objective:'Facilitar que nuevos clientes conozcan la oferta y realicen una reserva.',features:['Menú digital','Reservas','Mapa y WhatsApp'],screen:'Reservas y pedidos',short:'SZ',metrics:['32','4.8','12']},
+  5:{title:'Catálogo Tienda Nexo',category:'WEB',description:'Catálogo conceptual para mostrar productos y recibir pedidos mediante WhatsApp.',objective:'Presentar productos con claridad sin necesitar una tienda virtual compleja.',features:['Categorías','Ficha de producto','Pedido por WhatsApp'],screen:'Catálogo de productos',short:'TN',metrics:['96','14','28']},
+  6:{title:'Gestor de proyectos Orbe',category:'SISTEMAS',description:'Espacio ficticio para organizar tareas, responsables, avances y fechas.',objective:'Dar visibilidad al trabajo del equipo y detectar pendientes a tiempo.',features:['Tablero de tareas','Responsables','Avance por proyecto'],screen:'Proyectos activos',short:'OR',metrics:['12','68%','7']},
+  7:{title:'Automatización DocuFlow',category:'AUTOMATIZACIÓN',description:'Flujo conceptual que convierte formularios en PDFs y correos organizados.',objective:'Ahorrar tiempo en documentos repetitivos y reducir errores manuales.',features:['Formulario inicial','PDF automático','Envío por correo'],screen:'Flujos automáticos',short:'DF',metrics:['146','98%','3']},
+  8:{title:'Portal educativo AulaNova',category:'WEB + SISTEMAS',description:'Portal ficticio para cursos, materiales, inscripciones y seguimiento básico.',objective:'Centralizar la experiencia de estudiantes y la administración de contenidos.',features:['Cursos y módulos','Inscripciones','Progreso'],screen:'Panel educativo',short:'AN',metrics:['84','12','76%']},
+  9:{title:'Identidad visual Luma',category:'BRANDING',description:'Concepto de marca con identidad, paleta y sistema de piezas para redes.',objective:'Construir una presencia reconocible y consistente en distintos canales.',features:['Logo conceptual','Paleta y tipografía','Plantillas sociales'],screen:'Biblioteca de marca',short:'LU',metrics:['24','6','3']},
+  10:{title:'Panel inmobiliario Hábitat',category:'SISTEMAS + WEB',description:'Proyecto ficticio para organizar propiedades, contactos y seguimiento comercial.',objective:'Mostrar inmuebles y mantener ordenadas las oportunidades de venta o alquiler.',features:['Propiedades','Contactos interesados','Seguimiento comercial'],screen:'Gestión inmobiliaria',short:'HB',metrics:['48','17','11']}
+};
+
+const projectModal = document.getElementById('project-modal');
+let lastProjectTrigger = null;
+function openProjectModal(projectId, trigger) {
+  const project = fictionalProjects[projectId];
+  if (!project || !projectModal) return;
+  lastProjectTrigger = trigger;
+  document.getElementById('project-modal-category').textContent = project.category;
+  document.getElementById('project-modal-title').textContent = project.title;
+  document.getElementById('project-modal-description').textContent = project.description;
+  document.getElementById('project-modal-objective').textContent = project.objective;
+  document.getElementById('project-modal-features').innerHTML = project.features.map((item) => '<li>' + item + '</li>').join('');
+  document.getElementById('preview-screen-title').textContent = project.screen;
+  document.getElementById('preview-short-title').textContent = project.short;
+  document.getElementById('metric-a').textContent = project.metrics[0];
+  document.getElementById('metric-b').textContent = project.metrics[1];
+  document.getElementById('metric-c').textContent = project.metrics[2];
+  document.getElementById('project-modal-cta').href = 'https://wa.me/59174280209?text=' + encodeURIComponent('Hola CapiNova, me interesa crear algo similar al proyecto conceptual: ' + project.title + '.');
+  projectModal.hidden = false;
+  document.body.classList.add('project-modal-open');
+  projectModal.querySelector('.project-modal-close')?.focus();
+}
+function closeProjectModal() {
+  if (!projectModal) return;
+  projectModal.hidden = true;
+  document.body.classList.remove('project-modal-open');
+  lastProjectTrigger?.focus();
+}
+document.querySelectorAll('.project-view').forEach((button) => button.addEventListener('click', () => openProjectModal(button.dataset.project, button)));
+projectModal?.querySelectorAll('[data-close-modal]').forEach((element) => element.addEventListener('click', closeProjectModal));
+document.addEventListener('keydown', (event) => { if (event.key === 'Escape' && projectModal && !projectModal.hidden) closeProjectModal(); });
