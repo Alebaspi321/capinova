@@ -5,3 +5,20 @@
 @media(max-width:760px){.demo-header{height:auto;padding:12px 16px}.demo-badge{display:none}.back-link{font-size:10px}.project-shell{display:block}.project-nav{position:static;height:auto;border-right:0;border-bottom:1px solid var(--line);padding:18px 16px}.nav-intro{padding-bottom:12px}.nav-intro h1{font-size:19px}.project-nav nav{display:flex;overflow:auto;padding-bottom:7px}.project-nav-button{min-width:150px}.quote-link{display:none}.project-main{padding:24px 14px 50px}.project-top{align-items:start}.project-switcher{display:none}.project-top h2{font-size:32px}.window-bar{grid-template-columns:1fr 1fr}.window-bar em{display:none}.app-stage,.app{min-height:600px}.panel-grid,.calendar-layout,.course-layout,.brand-canvas{grid-template-columns:1fr}.stat-grid{grid-template-columns:1fr 1fr}.menu-grid,.shop-grid,.property-grid{grid-template-columns:1fr 1fr}.kanban{overflow:auto}.kanban-col{min-width:210px}.project-info{grid-template-columns:1fr}.flow{flex-direction:column}.flow-arrow{transform:rotate(90deg)}}
 @media(max-width:480px){.demo-brand small{display:none}.demo-brand img{width:38px;height:38px}.back-link{max-width:90px}.app-content{padding:14px}.app-toolbar{padding:0 14px}.stat-grid{grid-template-columns:1fr}.menu-grid,.shop-grid,.property-grid{grid-template-columns:1fr}.window-bar b{font-size:8px}.data-row{grid-template-columns:1fr auto}.data-row span:last-child{display:none}}
 @media(prefers-reduced-motion:reduce){*{scroll-behavior:auto}.toast{transition:none}}
+
+/* Full standalone demo mode — v1100 */
+.full-demo-bar{display:none}
+body.full-demo{background:#eef3f9;overflow-x:hidden}
+body.full-demo .demo-header,body.full-demo .project-nav,body.full-demo .project-top,body.full-demo .project-info,body.full-demo .window-bar{display:none!important}
+body.full-demo .project-shell{display:block;max-width:none;min-height:100vh}
+body.full-demo .project-main{padding:0}
+body.full-demo .demo-window{border:0;border-radius:0;box-shadow:none;background:#f4f7fb;min-height:100vh}
+body.full-demo .app-stage,body.full-demo .app{min-height:100vh}
+body.full-demo .app-toolbar{padding-left:28px;padding-right:190px;height:78px}
+body.full-demo .app-content{max-width:1440px;width:100%;margin:0 auto;padding:34px}
+body.full-demo .full-demo-bar{position:fixed;z-index:100;top:14px;right:16px;left:16px;display:flex;justify-content:space-between;align-items:center;pointer-events:none}
+.full-demo-bar>a,.full-demo-bar>div{pointer-events:auto;display:flex;align-items:center;gap:9px;height:48px;padding:0 12px;border:1px solid rgba(102,129,171,.2);border-radius:14px;background:rgba(6,23,49,.92);box-shadow:0 10px 35px rgba(0,10,35,.2);backdrop-filter:blur(16px);color:#fff;text-decoration:none}
+.full-demo-bar>a img{width:30px;height:30px;border-radius:9px}.full-demo-bar>a span{font-size:10px;font-weight:800}
+.full-demo-bar>div{margin-left:auto}.full-demo-bar small{font-size:8px;letter-spacing:.14em;color:#66e9ff;font-weight:800}.full-demo-bar b{font-size:9px;color:#b7c8df}.full-demo-bar button{width:30px;height:30px;border:1px solid rgba(255,255,255,.12);border-radius:9px;background:rgba(255,255,255,.06);color:#fff;cursor:pointer}.full-demo-bar button:hover{background:#1d6eff}
+body.full-demo .toast{bottom:20px}
+@media(max-width:760px){body.full-demo .app-toolbar{padding:72px 14px 12px;height:auto;min-height:124px;align-items:end}body.full-demo .app-content{padding:18px 14px 32px}.full-demo-bar{top:10px;left:10px;right:10px}.full-demo-bar>a span,.full-demo-bar small{display:none}.full-demo-bar>a,.full-demo-bar>div{height:44px;padding:0 9px}}
