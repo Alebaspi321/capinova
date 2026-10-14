@@ -213,3 +213,30 @@ document.addEventListener('click', (event) => {
   if (type === 'brand') { liveDemoState.brand = !liveDemoState.brand; card.classList.toggle('palette-alt', liveDemoState.brand); if (output) output.textContent = liveDemoState.brand ? 'Paleta Terracota' : 'Paleta Luma'; }
   if (type === 'estate') { liveDemoState.estate = liveDemoState.estate % 3 + 1; const properties = ['Casa Aurora', 'Loft Central', 'Residencia Norte']; const title = card.querySelector('.mini-property-main b'); if (title) title.textContent = properties[liveDemoState.estate - 1]; if (output) output.textContent = liveDemoState.estate + ' de 3'; }
 });
+
+
+// Professional portfolio filtering
+const portfolioFilterButtons = document.querySelectorAll('[data-portfolio-filter]');
+const portfolioCards = document.querySelectorAll('[data-portfolio-category]');
+const portfolioCount = document.querySelector('#portfolio-count');
+portfolioFilterButtons.forEach((button) => {
+  button.addEventListener('click', () => {
+    const filter = button.dataset.portfolioFilter;
+    portfolioFilterButtons.forEach((item) => {
+      item.classList.toggle('active', item === button);
+      item.setAttribute('aria-pressed', item === button ? 'true' : 'false');
+    });
+    let visible = 0;
+    portfolioCards.forEach((card) => {
+      const show = filter === 'all' || card.dataset.portfolioCategory === filter;
+      card.hidden = !show;
+      card.classList.remove('is-revealing');
+      if (show) {
+        visible += 1;
+        void card.offsetWidth;
+        card.classList.add('is-revealing');
+      }
+    });
+    if (portfolioCount) portfolioCount.textContent = visible;
+  });
+});
