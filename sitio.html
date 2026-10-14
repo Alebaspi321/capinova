@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Demos interactivas del portafolio de CapiNova">
+  <title>Proyecto interactivo | CapiNova</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="proyecto.css?v=20261014-1110">
+</head>
+<body>
+  <header class="demo-header">
+    <a class="demo-brand" href="./index.html?v=20261014-1110#portafolio">
+      <img src="./assets/logo-official.webp?v=20261013-0300" alt="CapiNova">
+      <span><b>CapiNova</b><small>Laboratorio de proyectos</small></span>
+    </a>
+    <div class="demo-badge"><i></i> DEMO INTERACTIVA · DATOS FICTICIOS</div>
+    <a class="back-link" href="./index.html?v=20261014-1110#portafolio">← Volver al portafolio</a>
+  </header>
+
+  <div class="project-shell">
+    <aside class="project-nav" aria-label="Proyectos del portafolio">
+      <div class="nav-intro"><small>EXPLORA</small><h1>10 ideas convertidas en experiencias.</h1><p>Selecciona un proyecto y prueba sus funciones.</p></div>
+      <nav id="project-list"></nav>
+      <a class="quote-link" id="quote-link" target="_blank" rel="noopener">Quiero algo similar <span>↗</span></a>
+    </aside>
+
+    <main class="project-main">
+      <section class="project-top">
+        <div><span class="project-kicker" id="project-category"></span><h2 id="project-title"></h2><p id="project-description"></p></div>
+        <div class="project-switcher"><button id="previous-project" type="button" aria-label="Proyecto anterior">←</button><span id="project-counter"></span><button id="next-project" type="button" aria-label="Proyecto siguiente">→</button></div>
+      </section>
+
+      <section class="demo-window">
+        <div class="window-bar"><span><i></i><i></i><i></i></span><b id="window-address">demo.capinova.bo</b><em>Vista conceptual</em></div>
+        <div class="app-stage" id="app-stage" aria-live="polite"></div>
+      </section>
+
+      <section class="project-info">
+        <article><small>QUÉ PUEDES PROBAR</small><h3 id="project-action-title"></h3><p id="project-action-copy"></p></article>
+        <article><small>IDEAL PARA</small><div class="chips" id="project-chips"></div></article>
+        <a class="next-card" id="next-card" href="#"><span>Siguiente proyecto</span><strong id="next-title"></strong><i>→</i></a>
+      </section>
+    </main>
+  </div>
+
+  <div class="full-demo-bar" id="full-demo-bar">
+    <a href="./index.html?v=20261014-1110#portafolio"><img src="./assets/logo-official.webp?v=20261013-0300" alt=""> <span>Volver al portafolio</span></a>
+    <div><small>DEMO FUNCIONAL</small><button type="button" id="full-prev" aria-label="Proyecto anterior">←</button><b id="full-counter">01 / 10</b><button type="button" id="full-next" aria-label="Proyecto siguiente">→</button></div>
+  </div>
+  <div class="toast" id="toast" role="status"></div>
+  <script src="proyecto.js?v=20261014-1110"></script>
+</body>
+</html>
